@@ -1,2 +1,3 @@
 # ProjectFrontEnd_News
-News Application
+We're making a news website using RSS to post news on my page. 
+This project uses AngularCLI Framework for Frontend
