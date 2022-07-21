@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import {Catalog} from "../../model/catalog";
-import {NewsService} from "../news.service";
-import {HttpClient} from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import * as xml2js from "xml2js";
-import {RSSNews} from "../NewsRSS";
-
+import { NewsRss } from './news-rss';
 @Component({
-  selector: 'app-catalog-detail-component',
-  templateUrl: './catalog-detail-component.component.html',
-  styleUrls: ['./catalog-detail-component.component.scss']
+  selector: 'app-test',
+  templateUrl: './test.component.html',
+  styleUrls: ['./test.component.scss']
 })
-export class CatalogDetailComponentComponent implements OnInit {
-  RssData: RSSNews;
+export class TestComponent implements OnInit {
+
+  RssData: NewsRss;
   constructor(private http: HttpClient) {}
   GetRssFeedData() {
     const requestOptions: Object = {
@@ -22,9 +20,7 @@ export class CatalogDetailComponentComponent implements OnInit {
       .get<any>("https://thethao247.vn/lien-minh-huyen-thoai-c181.rss", requestOptions)
       .subscribe(data => {
         let parseString = xml2js.parseString;
-        parseString(data, (err, result: RSSNews) => {
-          console.log(data)
-          console.log(result)
+        parseString(data, (err, result: NewsRss) => {
           this.RssData = result;
         });
       });
@@ -35,4 +31,5 @@ export class CatalogDetailComponentComponent implements OnInit {
   }
 
 }
+
 export interface IRssData {}
