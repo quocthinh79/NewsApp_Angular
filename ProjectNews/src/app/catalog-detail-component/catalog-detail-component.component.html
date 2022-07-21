@@ -2,68 +2,54 @@
   <div class="w-50 h-100 p-3 bg-white overflow-auto">
     <div class="header d-flex flex-column h-50">
       <div class="title fs-2 text fw-bold">
-        Liên Minh Huyền Thoại
+        {{RssData.rss.channel[0].title}}
       </div>
       <div class="big-news flex-1 d-flex bg-big-news mb-3">
-        <div class="image-big-news flex-1" style="background-size: cover ;background-image: url('https://cdn-img.thethao247.vn/resize_320x200/storage/files/minhnp/2022/06/30/okkkkkkkk-1656574993.jpg')">
+        <a href="{{RssData.rss.channel[0].item[0].link}}" class="image-big-news flex-1" style="background-size: cover ;background-image: url({{RssData.rss.channel[0].item[0].image}})">
 
-        </div>
+        </a>
         <div class="right-content-big-news flex-1 mx-3 my-2">
-            <div class="title fw-bold fs-5 text mb-2">
-              Quang Hải và những tuyển thủ Việt Nam từng xuất ngoại: Dàn sao HAGL lấn lướt
-            </div>
+            <a href="{{RssData.rss.channel[0].item[0].link}}" class="title fw-bold fs-5 text mb-2">
+              {{RssData.rss.channel[0].item[0].title}}
+            </a>
           <div class="content ">
-            Trước trường hợp của Nguyễn Quang Hải, đã có không ít cầu thủ Việt Nam từng xuất ngoại và dàn sao của HAGL đang lấn lướt trong danh sách này.
+            {{RssData.rss.channel[0].item[0].description.toString().slice(RssData.rss.channel[0].item[0].description.toString().lastIndexOf(">") + 1, RssData.rss.channel[0].item[0].description.toString().length)}}
           </div>
         </div>
       </div>
       <!--Item-->
       <div class="small-news flex-1 d-flex flex-row justify-content-between">
         <!--Item small-->
-        <div class="item-small-news w-200 d-flex flex-column ">
-          <div class="img flex-1 mb-2" style="background-size: cover ;background-image: url('https://cdn-img.thethao247.vn/resize_320x200/storage/files/nvhainam/2022/07/18/img_1990-1658117827.jpg')">
+        <div class="item-small-news w-200 d-flex flex-column m-2"
+             *ngFor="let x of forRange(1, 4)">
+          <a href="{{RssData.rss.channel[0].item[x].link}}" class="img flex-1 mb-2" style="background-size: cover ;background-image: url({{RssData.rss.channel[0].item[x].image}})">
 
-          </div>
-          <div class="content flex-1 fw-bold fs-6 text">
-            SofM và WBG chấm dứt chuỗi 9 trận thắng của đội đầu bảng LPL
-          </div>
-        </div>
-        <!--Item small-->
-        <div class="item-small-news w-200 d-flex flex-column ">
-          <div class="img flex-1 mb-2" style="background-size: cover ;background-image: url('https://cdn-img.thethao247.vn/resize_320x200/storage/files/nvhainam/2022/07/18/img_1990-1658117827.jpg')">
-
-          </div>
-          <div class="content flex-1 fw-bold fs-6 text">
-            SofM và WBG chấm dứt chuỗi 9 trận thắng của đội đầu bảng LPL
-          </div>
-        </div>
-        <!--Item small-->
-        <div class="item-small-news w-200 d-flex flex-column ">
-          <div class="img flex-1 mb-2" style="background-size: cover ;background-image: url('https://cdn-img.thethao247.vn/resize_320x200/storage/files/nvhainam/2022/07/18/img_1990-1658117827.jpg')">
-
-          </div>
-          <div class="content flex-1 fw-bold fs-6 text">
-            SofM và WBG chấm dứt chuỗi 9 trận thắng của đội đầu bảng LPL
-          </div>
+          </a>
+          <a href="{{RssData.rss.channel[0].item[x].link}}" class="content flex-1 fw-bold fs-6 text">
+            {{RssData.rss.channel[0].item[x].title}}
+          </a>
         </div>
       </div>
     </div>
     <div class="newest h-100 ">
       <div class="title fs-4 text">Mới nhất</div>
       <div class="border border-top border-3 border-primary mb-3"></div>
+      <div >
+
+      </div>
       <!--Item-->
       <div
-        *ngFor="let x of RssData.rss.channel[0].item; let i = index;">
+        *ngFor="let x of forRange(4, RssData.rss.channel[0].item.length)">
         <div class="item d-flex flex-row h-140 mb-4">
-          <div class="image flex-1" style="background-size: cover ;background-image: url({{x.image}})">
+          <a href="{{RssData.rss.channel[0].item[x].link}}" class="image flex-1" style="background-size: cover ;background-image: url({{RssData.rss.channel[0].item[x].image}})">
 
-          </div>
+          </a>
           <div class="content-item flex-3 ms-3 d-flex flex-column">
-            <a href="{{x.link}}" class="title-item fw-bold fs-5 text mb-2">
-              {{x.title}}
+            <a href="{{RssData.rss.channel[0].item[x].link}}" class="title-item fw-bold fs-5 text mb-2">
+              {{RssData.rss.channel[0].item[x].title}}
             </a>
             <div class="detail-content text-content overflow-hidden">
-              {{x.description.toString().slice(x.description.toString().lastIndexOf(">") + 1, x.description.toString().length)}}
+              {{RssData.rss.channel[0].item[x].description.toString().slice(RssData.rss.channel[0].item[x].description.toString().lastIndexOf(">") + 1, RssData.rss.channel[0].item[x].description.toString().length)}}
             </div>
           </div>
         </div>

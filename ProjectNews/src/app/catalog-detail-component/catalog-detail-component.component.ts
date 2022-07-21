@@ -23,11 +23,17 @@ export class CatalogDetailComponentComponent implements OnInit {
       .subscribe(data => {
         let parseString = xml2js.parseString;
         parseString(data, (err, result: RSSNews) => {
-          console.log(data)
-          console.log(result)
-          this.RssData = result;
+            this.RssData = result;
         });
       });
+  }
+
+  forRange(start: number, end: number) {
+    const array = [];
+    for (let n = start; n < end; n++) {
+      array.push(n);
+    }
+    return array;
   }
 
   ngOnInit(): void {
@@ -35,4 +41,3 @@ export class CatalogDetailComponentComponent implements OnInit {
   }
 
 }
-export interface IRssData {}
