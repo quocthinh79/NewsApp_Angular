@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Catalog} from "../../model/catalog";
-import {NewsService} from "../news.service";
 import {HttpClient} from "@angular/common/http";
 import * as xml2js from "xml2js";
-import {RSSNews} from "../NewsRSS";
+import {RSSNews} from "../../model/NewsRSS";
 
 @Component({
   selector: 'app-catalog-detail-component',

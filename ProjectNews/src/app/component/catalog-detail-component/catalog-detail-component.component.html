@@ -5,7 +5,7 @@
         {{RssData.rss.channel[0].title}}
       </div>
       <div class="big-news flex-1 d-flex bg-big-news mb-3">
-        <a href="{{RssData.rss.channel[0].item[0].link}}" class="image-big-news flex-1" style="background-size: cover ;background-image: url({{RssData.rss.channel[0].item[0].image}})">
+        <a href="{{RssData.rss.channel[0].item[0].link}}" class="image-big-news flex-1 bg-center" style="background-size: cover ;background-image: url({{RssData.rss.channel[0].item[0].image}})">
 
         </a>
         <div class="right-content-big-news flex-1 mx-3 my-2">
@@ -22,7 +22,7 @@
         <!--Item small-->
         <div class="item-small-news w-200 d-flex flex-column m-2"
              *ngFor="let x of forRange(1, 4)">
-          <a href="{{RssData.rss.channel[0].item[x].link}}" class="img flex-1 mb-2" style="background-size: cover ;background-image: url({{RssData.rss.channel[0].item[x].image}})">
+          <a href="{{RssData.rss.channel[0].item[x].link}}" class="img flex-3 mb-2 bg-center" style="background-size: cover ;background-image: url({{RssData.rss.channel[0].item[x].image}})">
 
           </a>
           <a href="{{RssData.rss.channel[0].item[x].link}}" class="content flex-1 fw-bold fs-6 text">
@@ -41,7 +41,7 @@
       <div
         *ngFor="let x of forRange(4, RssData.rss.channel[0].item.length)">
         <div class="item d-flex flex-row h-140 mb-4">
-          <a href="{{RssData.rss.channel[0].item[x].link}}" class="image flex-1" style="background-size: cover ;background-image: url({{RssData.rss.channel[0].item[x].image}})">
+          <a href="{{RssData.rss.channel[0].item[x].link}}" class="image flex-1 bg-center" style="background-size: cover ;background-image: url({{RssData.rss.channel[0].item[x].image}})">
 
           </a>
           <div class="content-item flex-3 ms-3 d-flex flex-column">
