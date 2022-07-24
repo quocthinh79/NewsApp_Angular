@@ -46,10 +46,21 @@ import { MdbTransferModule } from 'mdb-angular-transfer';
 import { MdbMentionModule } from 'mdb-angular-mention';
 import { MdbCookiesManagementService } from 'mdb-angular-cookies-management';
 import { MdbStorageManagementService } from 'mdb-angular-storage-management';
+import { CatalogDetailComponentComponent } from './component/catalog-detail-component/catalog-detail-component.component';
+
+import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import { NavigationComponentComponent } from './component/navigation-component/navigation-component.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {AppRoutingModule} from "./router/app-routing.module";
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, CatalogDetailComponentComponent, NavigationComponentComponent],
   imports: [
+    AppRoutingModule,
+    MatToolbarModule,
+    HttpClientModule,
+    FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     MdbAccordionModule,
