@@ -156,6 +156,7 @@
   flex: 0 32%;
 }
 .main-content .main .box-pick .flex-1 .bot-pick ul li h2 {
+  font-weight: bold;
   font-size: 14px;
 }
 .main-content .main .box-pick .flex-1 .special-line {
