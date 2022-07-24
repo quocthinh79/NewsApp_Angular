@@ -51,10 +51,14 @@ import { CatalogDetailComponentComponent } from './component/catalog-detail-comp
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { NavigationComponentComponent } from './component/navigation-component/navigation-component.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {AppRoutingModule} from "./router/app-routing.module";
 
 @NgModule({
   declarations: [AppComponent, CatalogDetailComponentComponent, NavigationComponentComponent],
   imports: [
+    AppRoutingModule,
+    MatToolbarModule,
     HttpClientModule,
     FormsModule,
     BrowserModule,

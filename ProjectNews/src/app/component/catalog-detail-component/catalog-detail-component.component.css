@@ -39,4 +39,20 @@
   text-overflow: ellipsis;
 }
 
+.bg-center {
+  background-position: center;
+}
+
+.mt-35rem {
+  margin-top: 3.5rem;
+}
+
+.h-30rem {
+  height: 30rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 /*# sourceMappingURL=catalog-detail-component.component.css.map */
