@@ -1,21 +1,21 @@
-import {ApplicationRef, Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import * as xml2js from "xml2js";
 import {RSSNews} from "../../model/NewsRSS";
-import {ActivatedRoute, Router, NavigationEnd } from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
-  selector: 'app-catalog-detail-component',
-  templateUrl: './catalog-detail-component.component.html',
-  styleUrls: ['./catalog-detail-component.component.scss']
+  selector: 'app-catalog-detail',
+  templateUrl: './catalog-detail.component.html',
+  styleUrls: ['./catalog-detail.component.scss']
 })
-export class CatalogDetailComponentComponent implements OnInit, OnDestroy {
+export class CatalogDetailComponent implements OnInit, OnDestroy {
   RssData: RSSNews;
 
   constructor(private http: HttpClient, private route: ActivatedRoute, private router: Router) {
     route.params.subscribe(val => {
       let id = this.route.snapshot.params.id;
-      this.GetRssFeedData(id);
+      this.GetRssFeedData(id)
     })
   }
 
@@ -43,11 +43,6 @@ export class CatalogDetailComponentComponent implements OnInit, OnDestroy {
     }
     return array;
   }
-
-  reloadCurrentRoute() {
-
-  }
-
 
   ngOnInit(): void {
   }
