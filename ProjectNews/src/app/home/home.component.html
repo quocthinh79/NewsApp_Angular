@@ -1,0 +1,606 @@
+<!--<div class="main-content">-->
+<!--  <div class="main">-->
+<!--    <div class="container bg-white p-1">-->
+<!--      <div class="box-pick pb-3">-->
+<!--        <div class="w140 is_desktop">-->
+<!--          <div class="box_utility">-->
+<!--            <ul class="list_utility">-->
+<!--              <li>-->
+<!--                <a href="" title="Tin mới">-->
+<!--                  <i class="far fa-newspaper"></i>-->
+<!--                  <span class="spn_number_news">83</span>-->
+<!--                  Tin mới-->
+<!--                </a>-->
+<!--              </li>-->
+<!--              <li class="tructiep-li">-->
+<!--                <a href="" title="Video">-->
+<!--                  <i class="fab fa-youtube"></i>-->
+<!--                  Video-->
+<!--                </a>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <a href="" title="Livescore">-->
+<!--                  <i class="fas fa-video"></i>-->
+<!--                  Livescore-->
+<!--                </a>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <a href="" title="Lịch thi đấu bóng đá">-->
+<!--                  <i class="fas fa-calendar-alt"></i>-->
+<!--                  Lịch thi đấu-->
+<!--                </a>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <a href="/ket-qua-bong-da-truc-tuyen/" title="Kết quả bóng đá">-->
+<!--                  <i class="fas fa-medal"></i>-->
+<!--                  Kết quả-->
+<!--                </a>-->
+<!--              </li>-->
+<!--              <li class="news-24h">-->
+<!--                <a href="/bang-xep-hang-bong-da/" title="Bảng xếp hạng bóng đá">-->
+<!--                  <i class="fas fa-synagogue"></i>-->
+<!--                  BXH-->
+<!--                </a>-->
+<!--              </li>-->
+<!--              <li class="tructiep-li">-->
+<!--                <a href="" title="Trực tiếp bóng đá">-->
+<!--                  <img src="https://thethao247.vn/frontend/images/ico_tructiep.svg" class="tructiep-icon loading"-->
+<!--                       alt="Trực tiếp">-->
+<!--                  Trực tiếp-->
+<!--                </a>-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--            <ul class="list_tournamens">-->
+<!--              <li>-->
+<!--                <a href="/lich-thi-dau-bong-da/world-cup-qualification-asia-gd5.html"-->
+<!--                   title="Lịch thi đấu World Cup - Qualification Asia">-->
+<!--                  <div class="league-logo">-->
+<!--                    <img src="https://cdn-img.thethao247.vn/upload/api-football/flags/fifa.png"-->
+<!--                         alt="World Cup - Qualification Asia" title="Lịch thi đấu World Cup - Qualification Asia">-->
+<!--                  </div>-->
+<!--                  <div class="league-title">VL World Cup</div>-->
+<!--                </a>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <a href="/lich-thi-dau-bong-da/premier-league-gd9.html" title="Lịch thi đấu Premier League">-->
+<!--                  <div class="league-logo">-->
+<!--                    <img src="https://cdn-img.thethao247.vn/upload/api-football/flags/gb.svg" alt="Premier League"-->
+<!--                         title="Lịch thi đấu Premier League">-->
+<!--                  </div>-->
+<!--                  <div class="league-title">Premier League</div>-->
+<!--                </a>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <a href="/lich-thi-dau-bong-da/la-liga-gd14.html" title="Lịch thi đấu La Liga">-->
+<!--                  <div class="league-logo">-->
+<!--                    <img src="https://cdn-img.thethao247.vn/upload/api-football/flags/es.svg" alt="La Liga"-->
+<!--                         title="Lịch thi đấu La Liga">-->
+<!--                  </div>-->
+<!--                  <div class="league-title">La Liga</div>-->
+<!--                </a>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <a href="/lich-thi-dau-bong-da/serie-a-gd15.html" title="Lịch thi đấu Serie A">-->
+<!--                  <div class="league-logo">-->
+<!--                    <img src="https://cdn-img.thethao247.vn/upload/api-football/flags/it.svg" alt="Serie A"-->
+<!--                         title="Lịch thi đấu Serie A">-->
+<!--                  </div>-->
+<!--                  <div class="league-title">Serie A</div>-->
+<!--                </a>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <a href="/lich-thi-dau-bong-da/bundesliga-1-gd13.html" title="Lịch thi đấu Bundesliga 1">-->
+<!--                  <div class="league-logo">-->
+<!--                    <img src="https://cdn-img.thethao247.vn/upload/api-football/flags/de.svg" alt="Bundesliga 1"-->
+<!--                         title="Lịch thi đấu Bundesliga 1">-->
+<!--                  </div>-->
+<!--                  <div class="league-title">Bundesliga</div>-->
+<!--                </a>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <a href="/lich-thi-dau-bong-da/ligue-1-gd10.html" title="Lịch thi đấu Ligue 1">-->
+<!--                  <div class="league-logo">-->
+<!--                    <img src="https://cdn-img.thethao247.vn/upload/api-football/flags/fr.svg" alt="Ligue 1"-->
+<!--                         title="Lịch thi đấu Ligue 1">-->
+<!--                  </div>-->
+<!--                  <div class="league-title">Ligue 1</div>-->
+<!--                </a>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <a href="/lich-thi-dau-bong-da/uefa-champions-league-gd3.html"-->
+<!--                   title="Lịch thi đấu UEFA Champions League">-->
+<!--                  <div class="league-logo">-->
+<!--                    <img src="https://cdn-img.thethao247.vn/upload/api-football/flags/uefa.png"-->
+<!--                         alt="UEFA Champions League" title="Lịch thi đấu UEFA Champions League">-->
+<!--                  </div>-->
+<!--                  <div class="league-title">CUP C1</div>-->
+<!--                </a>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <a href="/lich-thi-dau-bong-da/uefa-europa-league-gd402.html" title="Lịch thi đấu UEFA Europa League">-->
+<!--                  <div class="league-logo">-->
+<!--                    <img src="https://cdn-img.thethao247.vn/upload/api-football/flags/uefa.png" alt="UEFA Europa League"-->
+<!--                         title="Lịch thi đấu UEFA Europa League">-->
+<!--                  </div>-->
+<!--                  <div class="league-title">Europa League</div>-->
+<!--                </a>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <a href="/lich-thi-dau-bong-da/vleague-1-gd8.html" title="Lịch thi đấu V.League 1">-->
+<!--                  <div class="league-logo">-->
+<!--                    <img src="https://cdn-img.thethao247.vn/upload/api-football/flags/vn.svg" alt="V.League 1"-->
+<!--                         title="Lịch thi đấu V.League 1">-->
+<!--                  </div>-->
+<!--                  <div class="league-title">V-League</div>-->
+<!--                </a>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <a href="/lich-thi-dau-bong-da/afc-champions-league-gd1023.html"-->
+<!--                   title="Lịch thi đấu AFC Champions League">-->
+<!--                  <div class="league-logo">-->
+<!--                    <img src="https://cdn-img.thethao247.vn/upload/api-football/leagues/17.png"-->
+<!--                         alt="AFC Champions League" title="Lịch thi đấu AFC Champions League">-->
+<!--                  </div>-->
+<!--                  <div class="league-title">AFC Champions</div>-->
+<!--                </a>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <a href="/lich-thi-dau-bong-da/afc-cup-gd4.html" title="Lịch thi đấu AFC Cup">-->
+<!--                  <div class="league-logo">-->
+<!--                    <img src="https://cdn-img.thethao247.vn/upload/api-football/leagues/1248.png" alt="AFC Cup"-->
+<!--                         title="Lịch thi đấu AFC Cup">-->
+<!--                  </div>-->
+<!--                  <div class="league-title">AFC CUP</div>-->
+<!--                </a>-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="flex-1">-->
+<!--          <div class="top-pick">-->
+<!--            <div class="w100-200">-->
+<!--              <div class="cover">-->
+<!--                <a href="https://thethao247.vn/426-truc-tiep-tottenham-vs-rangers-21h-hom-nay-23-7-d261419.html"-->
+<!--                   class="thumb" title="Trực tiếp Tottenham 2-1 Rangers: Cú đúp chóng vánh của Harry Kane">-->
+<!--                  <img-->
+<!--                    src="https://cdn-img.thethao247.vn/storage/files/camhm/2022/07/23/truc-tiep-tottenham-0-0-rangers-song-sat-son-kane-xuat-tran-161546.jpg"-->
+<!--                    style="width: 100%; height: 400px;" alt="Trực tiếp Tottenham 2-1 Rangers: Cú đúp chóng vánh của Harry Kane">-->
+<!--                </a>-->
+<!--                <div class="content">-->
+<!--                  <a href="https://thethao247.vn/bong-da-quoc-te-c2/" class="title_cat" title="Bóng đá quốc tế">Bóng đá-->
+<!--                    quốc tế</a>-->
+<!--                  <h2><a href="https://thethao247.vn/426-truc-tiep-tottenham-vs-rangers-21h-hom-nay-23-7-d261419.html"-->
+<!--                         class="title" title="Trực tiếp Tottenham 2-1 Rangers: Cú đúp chóng vánh của Harry Kane">Trực-->
+<!--                    tiếp Tottenham 2-1 Rangers: Cú đúp chóng vánh của Harry Kane <span-->
+<!--                      class="status_live"><p>LIVE</p></span></a>-->
+<!--                  </h2>-->
+<!--                  <p class="sapo">(Trực tiếp bóng đá Tottenham vs Rangers) - Mặc dù đã bổ sung rất nhiều những bản hợp-->
+<!--                    đồng chất lượng trong phiên chợ hè 2022, tuy nhiên Tottenham vẫn chưa thể khiến người hâm mộ cảm-->
+<!--                    thấy yên tâm sau những trận giao hữu vừa qua.</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="w200 scroll">-->
+<!--              <div class="pick_right">-->
+<!--                <ul>-->
+<!--                  <li><h3><a-->
+<!--                    href="https://thethao247.vn/402-bang-xep-hang-giai-hang-nhat-quoc-gia-2022-vong-8-cand-giu-vung-ngoi-dau-d261342.html"-->
+<!--                    class="title" title="Bảng xếp hạng giải hạng Nhất Quốc gia 2022 vòng 8: CAND giữ vững ngôi đầu?">Bảng-->
+<!--                    xếp hạng giải hạng Nhất Quốc gia 2022 vòng 8: <span-->
+<!--                      class="special-line">CAND giữ vững ngôi đầu?</span></a></h3></li>-->
+<!--                  <li><h3><a-->
+<!--                    href="https://thethao247.vn/402-lich-thi-dau-vong-9-v-league-2022-hagl-ha-noi-tiep-tuc-bay-cao-d261247.html"-->
+<!--                    class="title" title="Lịch thi đấu vòng 9 V League 2022: HAGL, Hà Nội tiếp tục bay cao?">Lịch thi đấu-->
+<!--                    vòng 9 V League 2022: <span class="special-line">HAGL, Hà Nội tiếp tục bay cao?</span></a></h3></li>-->
+<!--                  <li><h3><a-->
+<!--                    href="https://thethao247.vn/416-vi-dybala-mourinho-se-phai-thay-doi-chien-thuat-d261472.html"-->
+<!--                    class="title" title="Mourinho sẽ phải thay đổi chiến thuật của Roma vì Dybala?">Mourinho sẽ phải-->
+<!--                    thay đổi chiến thuật của Roma vì Dybala?</a></h3></li>-->
+<!--                  <li><h3><a-->
+<!--                    href="https://thethao247.vn/415-erik-ten-hag-mu-da-hay-nhung-lai-tu-vut-di-chien-thang-d261480.html"-->
+<!--                    class="title" title="Erik Ten Hag: 'MU đá hay nhưng lại tự vứt đi chiến thắng'">Erik Ten Hag: <span-->
+<!--                    class="special-line">"MU đá hay nhưng lại tự vứt đi chiến thắng"</span></a></h3></li>-->
+<!--                  <li><h3><a-->
+<!--                    href="https://thethao247.vn/423-team-whales-vi-tri-thap-nhat-cua-doi-la-nam-trong-top-4-vcs-d261370.html"-->
+<!--                    class="title" title="Team Whales: ‘Vị trí thấp nhất của đội là nằm trong top 4 VCS’">Team Whales:-->
+<!--                    ‘Vị trí thấp nhất của đội là nằm trong top 4 VCS’</a></h3></li>-->
+<!--                  <li><h3><a href="https://thethao247.vn/403-bxh-vong-9-v-league-2022-hagl-ap-sat-top-dau-d261351.html"-->
+<!--                             class="title" title="BXH vòng 9 V-League 2022: HAGL áp sát top đầu"><span-->
+<!--                    class="special-line">BXH vòng 9 V-League 2022</span>: HAGL áp sát top đầu</a></h3></li>-->
+<!--                  <li><h3><a-->
+<!--                    href="https://thethao247.vn/426-lat-keo-ngoan-muc-ga-khong-lo-chot-muc-tieu-so-1-cua-chelsea-d261474.html"-->
+<!--                    class="title" title="Lật kèo ngoạn mục, 'gã khổng lồ' chốt mục tiêu số 1 của Chelsea">Lật kèo ngoạn-->
+<!--                    mục, 'gã khổng lồ'<span class="special-line"> chốt mục tiêu số 1 của Chelsea</span></a></h3></li>-->
+<!--                  <li><h3><a-->
+<!--                    href="https://thethao247.vn/403-video-quang-hai-gay-an-tuong-manh-voi-cdv-phap-d261421.html"-->
+<!--                    class="title" title="VIDEO: Quang Hải gây ấn tượng mạnh với CĐV Pháp">VIDEO: <span-->
+<!--                    class="special-line">Quang Hải</span> gây ấn tượng mạnh với CĐV Pháp</a></h3></li>-->
+<!--                  <li><h3><a-->
+<!--                    href="https://thethao247.vn/420-ket-qua-v-league-2022-slna-vs-hai-phong-18h00-23-07-d261440.html"-->
+<!--                    class="title" title="Phan Văn Đức lập siêu phẩm, SLNA 'hủy diệt' Hải Phòng để dẫn đầu BXH">Phan Văn-->
+<!--                    Đức lập siêu phẩm, <span class="special-line">SLNA 'hủy diệt' Hải Phòng để dẫn đầu BXH</span></a>-->
+<!--                  </h3></li>-->
+<!--                  <li><h3><a-->
+<!--                    href="https://thethao247.vn/420-highlights-slna-3-0-hai-phong-phan-van-duc-lap-sieu-pham-slna-len-dinh-bang-d261477.html"-->
+<!--                    class="title" title="Highlights SLNA 3-0 Hải Phòng: Phan Văn Đức lập siêu phẩm, SLNA lên đỉnh bảng"><span-->
+<!--                    class="special-line">Highlights SLNA 3-0 Hải Phòng:</span> Phan Văn Đức lập siêu phẩm, SLNA lên đỉnh-->
+<!--                    bảng</a></h3></li>-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="bot-pick">-->
+<!--            <ul>-->
+<!--              <li>-->
+<!--                <a href="https://thethao247.vn/402-nguoi-dai-dien-giai-thich-nguyen-nhan-van-hau-khong-the-thi-dau-o-ha-lan-d261471.html" class="thumb" title="Người đại diện giải thích nguyên nhân Văn Hậu không thể thi đấu ở Hà Lan"><img class="" src="https://cdn-img.thethao247.vn/resize_389x234/storage/files/ngachelsea/2022/07/21/doan-van-hau-van-chua-the-khien-hlv-park-hang-seo-yen-tam-160541.jpg" width="389" height="234" alt="Người đại diện giải thích nguyên nhân Văn Hậu không thể thi đấu ở Hà Lan"></a> <div class="content">-->
+<!--                <a href="https://thethao247.vn/bong-da-viet-nam-c1/" class="title_cat" title="Bóng đá Việt Nam">Bóng đá Việt Nam</a> <h2><a href="https://thethao247.vn/402-nguoi-dai-dien-giai-thich-nguyen-nhan-van-hau-khong-the-thi-dau-o-ha-lan-d261471.html" class="title" title="Người đại diện giải thích nguyên nhân Văn Hậu không thể thi đấu ở Hà Lan">Người đại diện giải thích nguyên nhân <span class="special-line">Văn Hậu không thể thi đấu ở Hà Lan</span></a></h2> </div>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <a href="https://thethao247.vn/420-he-lo-ly-do-viet-nam-tu-choi-loi-moi-tham-du-kings-cup-cua-thai-lan-d261479.html" class="thumb" title="Hé lộ lý do Việt Nam từ chối lời mời tham dự King's Cup của Thái Lan"><img class="" src="https://cdn-img.thethao247.vn/resize_389x234/storage/files/minhnp/2022/07/23/vietnam-thailan1-1658584897.jpg" width="389" height="234" alt="Hé lộ lý do Việt Nam từ chối lời mời tham dự King's Cup của Thái Lan"></a> <div class="content">-->
+<!--                <a href="https://thethao247.vn/bong-da-viet-nam-c1/" class="title_cat" title="Bóng đá Việt Nam">Bóng đá Việt Nam</a> <h2><a href="https://thethao247.vn/420-he-lo-ly-do-viet-nam-tu-choi-loi-moi-tham-du-kings-cup-cua-thai-lan-d261479.html" class="title" title="Hé lộ lý do Việt Nam từ chối lời mời tham dự King's Cup của Thái Lan"><span class="special-line">Hé lộ lý do Việt Nam từ chối lời mời tham dự King's Cup</span> của Thái Lan</a></h2> </div>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <a href="https://thethao247.vn/420-ket-qua-binh-dinh-vs-da-nang-18h00-hom-nay-23-07-d261450.html" class="thumb" title="Đình Trọng mắc sai lầm, Bình Định 'thua đau' Đà Nẵng trên sân nhà"><img class="" src="https://cdn-img.thethao247.vn/resize_389x234/storage/files/minhnp/2022/07/23/dinh-trong-mac-sai-lam-binh-dinh-thua-dau-da-nang-tren-san-nha-161532.jpg" width="389" height="234" alt="Đình Trọng mắc sai lầm, Bình Định 'thua đau' Đà Nẵng trên sân nhà"></a> <div class="content">-->
+<!--                <a href="https://thethao247.vn/bong-da-viet-nam-c1/" class="title_cat" title="Bóng đá Việt Nam">Bóng đá Việt Nam</a> <h2><a href="https://thethao247.vn/420-ket-qua-binh-dinh-vs-da-nang-18h00-hom-nay-23-07-d261450.html" class="title" title="Đình Trọng mắc sai lầm, Bình Định 'thua đau' Đà Nẵng trên sân nhà">Đình Trọng mắc sai lầm, <span class="special-line">Bình Định 'thua đau' Đà Nẵng trên sân nhà</span></a></h2> </div>-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+<!--      <div class="mb-15 d-flex"></div>-->
+<!--      <div class="mb-15 d-flex"></div>-->
+<!--      <div class="d-flex"></div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<div class="main-content">
+  <div class="main">
+    <div class="container bg-white p-1">
+      <div class="box-pick pb-3 row">
+        <div class="is_desktop col-md-3 p-0">
+          <div class="box_utility me-3">
+            <ul class="list_utility p-0 pt-2 pb-1">
+              <li>
+                <a href="" title="Tin mới">
+                  <i class="far fa-newspaper"></i>
+                  <span class="spn_number_news">83</span>
+                  <span class="text_center">Tin mới</span>
+                </a>
+              </li>
+              <li class="tructiep-li">
+                <a href="" title="Video">
+                  <i class="fab fa-youtube"></i>
+                  <span class="text_center">Video</span>
+                </a>
+              </li>
+              <li>
+                <a href="" title="Livescore">
+                  <i class="fas fa-video"></i>
+                  <span class="text_center">Livescore</span>
+                </a>
+              </li>
+              <li>
+                <a href="" title="Lịch thi đấu bóng đá">
+                  <i class="fas fa-calendar-alt"></i>
+                  <span class="text_center">Lịch thi đấu</span>
+                </a>
+              </li>
+              <li>
+                <a href="/ket-qua-bong-da-truc-tuyen/" title="Kết quả bóng đá">
+                  <i class="fas fa-medal"></i>
+                  <span class="text_center">Kết quả</span>
+                </a>
+              </li>
+              <li class="news-24h">
+                <a href="/bang-xep-hang-bong-da/" title="Bảng xếp hạng bóng đá">
+                  <i class="fas fa-synagogue"></i>
+                  <span class="text_center">BXH</span>
+                </a>
+              </li>
+              <li class="tructiep-li">
+                <a href="" title="Trực tiếp bóng đá">
+                  <img src="https://thethao247.vn/frontend/images/ico_tructiep.svg" class="tructiep-icon loading"
+                       width="25%"
+                       alt="Trực tiếp">
+                  <span class="text_center">Trực tiếp</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="list_tournamens">
+              <li>
+                <a href="/lich-thi-dau-bong-da/world-cup-qualification-asia-gd5.html"
+                   title="Lịch thi đấu World Cup - Qualification Asia">
+                  <div class="league-logo">
+                    <img src="https://cdn-img.thethao247.vn/upload/api-football/flags/fifa.png"
+                         alt="World Cup - Qualification Asia" title="Lịch thi đấu World Cup - Qualification Asia">
+                  </div>
+                  <div class="league-title d-flex justify-content-center align-items-center fw-bold">VL World Cup</div>
+                </a>
+              </li>
+              <li>
+                <a href="/lich-thi-dau-bong-da/premier-league-gd9.html" title="Lịch thi đấu Premier League">
+                  <div class="league-logo">
+                    <img src="https://cdn-img.thethao247.vn/upload/api-football/flags/gb.svg" alt="Premier League"
+                         title="Lịch thi đấu Premier League">
+                  </div>
+                  <div class="league-title d-flex justify-content-center align-items-center fw-bold">Premier League
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/lich-thi-dau-bong-da/la-liga-gd14.html" title="Lịch thi đấu La Liga">
+                  <div class="league-logo">
+                    <img src="https://cdn-img.thethao247.vn/upload/api-football/flags/es.svg" alt="La Liga"
+                         title="Lịch thi đấu La Liga">
+                  </div>
+                  <div class="league-title d-flex justify-content-center align-items-center fw-bold">La Liga</div>
+                </a>
+              </li>
+              <li>
+                <a href="/lich-thi-dau-bong-da/serie-a-gd15.html" title="Lịch thi đấu Serie A">
+                  <div class="league-logo">
+                    <img src="https://cdn-img.thethao247.vn/upload/api-football/flags/it.svg" alt="Serie A"
+                         title="Lịch thi đấu Serie A">
+                  </div>
+                  <div class="league-title d-flex justify-content-center align-items-center fw-bold">Serie A</div>
+                </a>
+              </li>
+              <li>
+                <a href="/lich-thi-dau-bong-da/bundesliga-1-gd13.html" title="Lịch thi đấu Bundesliga 1">
+                  <div class="league-logo">
+                    <img src="https://cdn-img.thethao247.vn/upload/api-football/flags/de.svg" alt="Bundesliga 1"
+                         title="Lịch thi đấu Bundesliga 1">
+                  </div>
+                  <div class="league-title d-flex justify-content-center align-items-center fw-bold">Bundesliga</div>
+                </a>
+              </li>
+              <li>
+                <a href="/lich-thi-dau-bong-da/ligue-1-gd10.html" title="Lịch thi đấu Ligue 1">
+                  <div class="league-logo">
+                    <img src="https://cdn-img.thethao247.vn/upload/api-football/flags/fr.svg" alt="Ligue 1"
+                         title="Lịch thi đấu Ligue 1">
+                  </div>
+                  <div class="league-title d-flex justify-content-center align-items-center fw-bold">Ligue 1</div>
+                </a>
+              </li>
+              <li>
+                <a href="/lich-thi-dau-bong-da/uefa-champions-league-gd3.html"
+                   title="Lịch thi đấu UEFA Champions League">
+                  <div class="league-logo">
+                    <img src="https://cdn-img.thethao247.vn/upload/api-football/flags/uefa.png"
+                         alt="UEFA Champions League" title="Lịch thi đấu UEFA Champions League">
+                  </div>
+                  <div class="league-title d-flex justify-content-center align-items-center fw-bold">CUP C1</div>
+                </a>
+              </li>
+              <li>
+                <a href="/lich-thi-dau-bong-da/uefa-europa-league-gd402.html" title="Lịch thi đấu UEFA Europa League">
+                  <div class="league-logo">
+                    <img src="https://cdn-img.thethao247.vn/upload/api-football/flags/uefa.png" alt="UEFA Europa League"
+                         title="Lịch thi đấu UEFA Europa League">
+                  </div>
+                  <div class="league-title d-flex justify-content-center align-items-center fw-bold">Europa League</div>
+                </a>
+              </li>
+              <li>
+                <a href="/lich-thi-dau-bong-da/vleague-1-gd8.html" title="Lịch thi đấu V.League 1">
+                  <div class="league-logo">
+                    <img src="https://cdn-img.thethao247.vn/upload/api-football/flags/vn.svg" alt="V.League 1"
+                         title="Lịch thi đấu V.League 1">
+                  </div>
+                  <div class="league-title d-flex justify-content-center align-items-center fw-bold">V-League</div>
+                </a>
+              </li>
+              <li>
+                <a href="/lich-thi-dau-bong-da/afc-champions-league-gd1023.html"
+                   title="Lịch thi đấu AFC Champions League">
+                  <div class="league-logo">
+                    <img src="https://cdn-img.thethao247.vn/upload/api-football/leagues/17.png"
+                         alt="AFC Champions League" title="Lịch thi đấu AFC Champions League">
+                  </div>
+                  <div class="league-title d-flex justify-content-center align-items-center fw-bold">AFC Champions</div>
+                </a>
+              </li>
+              <li>
+                <a href="/lich-thi-dau-bong-da/afc-cup-gd4.html" title="Lịch thi đấu AFC Cup">
+                  <div class="league-logo">
+                    <img src="https://cdn-img.thethao247.vn/upload/api-football/leagues/1248.png" alt="AFC Cup"
+                         title="Lịch thi đấu AFC Cup">
+                  </div>
+                  <div class="league-title d-flex justify-content-center align-items-center fw-bold">AFC CUP</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex-1 col-md-9 p-0">
+          <div class="top-pick d-flex position-relative">
+            <div class="w100-200">
+              <div class="cover">
+                <div class="home_main_img">
+                  <img
+                    src="https://cdn-img.thethao247.vn/storage/files/camhm/2022/07/23/truc-tiep-tottenham-0-0-rangers-song-sat-son-kane-xuat-tran-161546.jpg"
+                    style="width: 100%; height: 400px;"
+                    alt="Trực tiếp Tottenham 2-1 Rangers: Cú đúp chóng vánh của Harry Kane">
+                  <a href="https://thethao247.vn/426-truc-tiep-tottenham-vs-rangers-21h-hom-nay-23-7-d261419.html"
+                     class="thumb" title="Trực tiếp Tottenham 2-1 Rangers: Cú đúp chóng vánh của Harry Kane">
+                  </a>
+                </div>
+                <div class="content">
+                  <a href="https://thethao247.vn/bong-da-quoc-te-c2/" class="title_cat" title="Bóng đá quốc tế">Bóng đá
+                    quốc tế</a>
+                  <h2><a href="https://thethao247.vn/426-truc-tiep-tottenham-vs-rangers-21h-hom-nay-23-7-d261419.html"
+                         class="title" title="Trực tiếp Tottenham 2-1 Rangers: Cú đúp chóng vánh của Harry Kane">Trực
+                    tiếp Tottenham 2-1 Rangers: Cú đúp chóng vánh của Harry Kane </a>
+                  </h2>
+                  <p class="sapo">(Trực tiếp bóng đá Tottenham vs Rangers) - Mặc dù đã bổ sung rất nhiều những bản hợp
+                    đồng chất lượng trong phiên chợ hè 2022, tuy nhiên Tottenham vẫn chưa thể khiến người hâm mộ cảm
+                    thấy yên tâm sau những trận giao hữu vừa qua.</p>
+                </div>
+              </div>
+            </div>
+            <div class="w200 scroll">
+              <div class="pick_right ps-4">
+                <ul class="p-0">
+                  <li>
+                    <h3>
+                      <a
+                        href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
+                        class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
+                        class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
+                      </a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a
+                        href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
+                        class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
+                        class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
+                      </a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a
+                        href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
+                        class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
+                        class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
+                      </a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a
+                        href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
+                        class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
+                        class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
+                      </a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a
+                        href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
+                        class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
+                        class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
+                      </a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a
+                        href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
+                        class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
+                        class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
+                      </a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a
+                        href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
+                        class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
+                        class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
+                      </a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a
+                        href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
+                        class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
+                        class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
+                      </a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a
+                        href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
+                        class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
+                        class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
+                      </a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a
+                        href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
+                        class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
+                        class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
+                      </a>
+                    </h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="bot-pick">
+            <ul>
+              <li>
+                <a
+                  href="https://thethao247.vn/402-nguoi-dai-dien-giai-thich-nguyen-nhan-van-hau-khong-the-thi-dau-o-ha-lan-d261471.html"
+                  class="thumb fw-bold"
+                  title="Người đại diện giải thích nguyên nhân Văn Hậu không thể thi đấu ở Hà Lan">
+                  <img
+                    src="https://cdn-img.thethao247.vn/resize_389x234/storage/files/ngachelsea/2022/07/21/doan-van-hau-van-chua-the-khien-hlv-park-hang-seo-yen-tam-160541.jpg"
+                    width="389" height="234"
+                    alt="Người đại diện giải thích nguyên nhân Văn Hậu không thể thi đấu ở Hà Lan"></a>
+                <div class="content">
+                  <a href="https://thethao247.vn/bong-da-viet-nam-c1/" class="title_cat" title="Bóng đá Việt Nam">Bóng
+                    đá Việt Nam</a>
+                  <h2><a
+                    href="https://thethao247.vn/402-nguoi-dai-dien-giai-thich-nguyen-nhan-van-hau-khong-the-thi-dau-o-ha-lan-d261471.html"
+                    class="title" title="Người đại diện giải thích nguyên nhân Văn Hậu không thể thi đấu ở Hà Lan">Người
+                    đại diện giải thích nguyên nhân <span class="special-line">Văn Hậu không thể thi đấu ở Hà Lan</span></a>
+                  </h2></div>
+              </li>
+              <li>
+                <a
+                  href="https://thethao247.vn/420-he-lo-ly-do-viet-nam-tu-choi-loi-moi-tham-du-kings-cup-cua-thai-lan-d261479.html"
+                  class="thumb" title="Hé lộ lý do Việt Nam từ chối lời mời tham dự King's Cup của Thái Lan"><img
+                  class=""
+                  src="https://cdn-img.thethao247.vn/resize_389x234/storage/files/minhnp/2022/07/23/vietnam-thailan1-1658584897.jpg"
+                  width="389" height="234"
+                  alt="Hé lộ lý do Việt Nam từ chối lời mời tham dự King's Cup của Thái Lan"></a>
+                <div class="content">
+                  <a href="https://thethao247.vn/bong-da-viet-nam-c1/" class="title_cat" title="Bóng đá Việt Nam">Bóng
+                    đá Việt Nam</a>
+                  <h2><a
+                    href="https://thethao247.vn/420-he-lo-ly-do-viet-nam-tu-choi-loi-moi-tham-du-kings-cup-cua-thai-lan-d261479.html"
+                    class="title" title="Hé lộ lý do Việt Nam từ chối lời mời tham dự King's Cup của Thái Lan"><span
+                    class="special-line">Hé lộ lý do Việt Nam từ chối lời mời tham dự King's Cup</span> của Thái Lan</a>
+                  </h2></div>
+              </li>
+              <li>
+                <a href="https://thethao247.vn/420-ket-qua-binh-dinh-vs-da-nang-18h00-hom-nay-23-07-d261450.html"
+                   class="thumb" title="Đình Trọng mắc sai lầm, Bình Định 'thua đau' Đà Nẵng trên sân nhà"><img class=""
+                                                                                                                src="https://cdn-img.thethao247.vn/resize_389x234/storage/files/minhnp/2022/07/23/dinh-trong-mac-sai-lam-binh-dinh-thua-dau-da-nang-tren-san-nha-161532.jpg"
+                                                                                                                width="389"
+                                                                                                                height="234"
+                                                                                                                alt="Đình Trọng mắc sai lầm, Bình Định 'thua đau' Đà Nẵng trên sân nhà"></a>
+                <div class="content">
+                  <a href="https://thethao247.vn/bong-da-viet-nam-c1/" class="title_cat" title="Bóng đá Việt Nam">Bóng
+                    đá Việt Nam</a>
+                  <h2><a href="https://thethao247.vn/420-ket-qua-binh-dinh-vs-da-nang-18h00-hom-nay-23-07-d261450.html"
+                         class="title" title="Đình Trọng mắc sai lầm, Bình Định 'thua đau' Đà Nẵng trên sân nhà">Đình
+                    Trọng mắc sai lầm, <span class="special-line">Bình Định 'thua đau' Đà Nẵng trên sân nhà</span></a>
+                  </h2></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="mb-15 d-flex"></div>
+      <div class="mb-15 d-flex"></div>
+      <div class="d-flex"></div>
+    </div>
+  </div>
+</div>
