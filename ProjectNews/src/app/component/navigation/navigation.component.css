@@ -10,6 +10,10 @@
   .navbar .nav-item .dropdown-menu {
     margin-top: 0;
   }
+
+  .navbar .dropdown-menu .dropdown-item:hover {
+    background-color: lightgrey;
+  }
 }
 
 /*# sourceMappingURL=navigation.component.css.map */
