@@ -12,8 +12,7 @@
   padding: 10px 0 5px 0;
   overflow: hidden;
   box-shadow: -4px -4px 15px 0 rgba(0, 0, 0, 0.1) inset;
-  margin-bottom: 15px;
-  margin-top: 15px;
+  margin: 15px 0px 15px 8px;
 }
 .main-content .main .box-pick .is_desktop .box_utility .list_tournamens li {
   display: block;
@@ -37,6 +36,7 @@
   background-color: #fff;
   border-radius: 0 0 30px 0;
   padding: 10px 0 5px 0;
+  margin-left: 8px;
   overflow: hidden;
   box-shadow: -4px -4px 15px 0 rgba(0, 0, 0, 0.1) inset;
 }
@@ -135,8 +135,8 @@
   top: 0;
   right: 0;
   height: 100%;
-  overflow: auto;
   border-bottom: 3px solid #f5f5f5;
+  overflow: auto;
 }
 .main-content .main .box-pick .flex-1 .top-pick .scroll .pick_right ul li {
   margin-bottom: 10px;
