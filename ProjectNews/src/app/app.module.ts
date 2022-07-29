@@ -53,6 +53,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { NavigationComponent } from './component/navigation/navigation.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {AppRoutingModule} from "./router/app-routing.module";
+import {DataService} from "./service/data.service";
 
 @NgModule({
   declarations: [AppComponent, CatalogDetailComponent, NavigationComponent],
@@ -105,7 +106,7 @@ import {AppRoutingModule} from "./router/app-routing.module";
     MdbTransferModule,
     MdbMentionModule,
   ],
-  providers: [MdbCookiesManagementService, MdbStorageManagementService],
+  providers: [MdbCookiesManagementService, MdbStorageManagementService, DataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
