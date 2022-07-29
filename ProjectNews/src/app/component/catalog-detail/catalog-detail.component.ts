@@ -5,6 +5,9 @@ import {RSSNews} from "../../model/NewsRSS";
 import {ActivatedRoute, Router, NavigationEnd } from "@angular/router";
 import {DataService} from "../../service/data.service";
 import {Observable} from "rxjs";
+import axios from "axios";
+import cheerio, {html} from "cheerio";
+import {response} from "express";
 
 @Component({
   selector: 'app-catalog-detail',
@@ -18,6 +21,8 @@ export class CatalogDetailComponent implements OnInit, OnDestroy {
     route.params.subscribe(val => {
       let id = this.route.snapshot.params.id;
       this.getRssFeedData(id);
+
+
     })
   }
 
@@ -28,6 +33,12 @@ export class CatalogDetailComponent implements OnInit, OnDestroy {
         this.RssData = result;
       });
     });
+    const cheerio = require('cheerio')
+    axios("https://thethao247.vn/406-ket-qua-v-league-2022-tp-hcm-vs-hai-phong-29-07-2022-d261910.html").then(response => {
+      const html = response.data
+      const $ = cheerio.load(html)
+      console.log($('#content_detail').html())
+    })
   }
 
   forRange(start: number, end: number) {
