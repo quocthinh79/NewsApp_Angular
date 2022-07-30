@@ -1,13 +1,9 @@
-import {ApplicationRef, Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import * as xml2js from "xml2js";
 import {RSSNews} from "../../model/NewsRSS";
 import {ActivatedRoute, Router, NavigationEnd } from "@angular/router";
 import {DataService} from "../../service/data.service";
-import {Observable} from "rxjs";
-import axios from "axios";
-import cheerio, {html} from "cheerio";
-import {response} from "express";
 
 @Component({
   selector: 'app-catalog-detail',
@@ -24,14 +20,14 @@ export class CatalogDetailComponent implements OnInit, OnDestroy {
     })
   }
 
-  getRssFeedData(paramater: string) {
-    this.service.getDataRss(paramater).subscribe(data => {
-      let parseString = xml2js.parseString;
-      parseString(data, (err, result: RSSNews) => {
-        this.RssData = result;
+    getRssFeedData(paramater: string) {
+      this.service.getDataRss(paramater).subscribe(data => {
+        let parseString = xml2js.parseString;
+        parseString(data, (err, result: RSSNews) => {
+          this.RssData = result;
+        });
       });
-    });
-  }
+    }
 
   forRange(start: number, end: number) {
     const array = [];
