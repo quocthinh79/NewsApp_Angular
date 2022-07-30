@@ -1,0 +1,271 @@
+.main-content {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.main-content .main .box-pick .is_desktop .box_utility .list_tournamens {
+  background-color: #fff;
+  border-radius: 0 30px 30px 0;
+  padding: 10px 0 5px 0;
+  overflow: hidden;
+  box-shadow: -4px -4px 15px 0 rgba(0, 0, 0, 0.1) inset;
+  margin: 15px 0px 15px -4px;
+}
+.main-content .main .box-pick .is_desktop .box_utility .list_tournamens li {
+  display: block;
+}
+.main-content .main .box-pick .is_desktop .box_utility .list_tournamens li a {
+  font-size: 11px;
+  padding: 7px 10px;
+  border-bottom: 1px solid #f3f3f3;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  color: #333;
+}
+.main-content .main .box-pick .is_desktop .box_utility .list_tournamens li a .league-logo {
+  width: 20%;
+  margin-right: 1em;
+}
+.main-content .main .box-pick .is_desktop .box_utility .list_utility {
+  background-color: #fff;
+  border-radius: 0 0 30px 0;
+  padding: 10px 0 5px 0;
+  margin-left: -4px;
+  overflow: hidden;
+  box-shadow: -4px -4px 15px 0 rgba(0, 0, 0, 0.1) inset;
+}
+.main-content .main .box-pick .is_desktop .box_utility .list_utility > li {
+  display: block;
+  padding: 0 15px;
+}
+.main-content .main .box-pick .is_desktop .box_utility .list_utility > li > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f3f3f3;
+  color: #292929;
+  text-transform: uppercase;
+  position: relative;
+}
+.main-content .main .box-pick .is_desktop .box_utility .list_utility > li > a .spn_number_news {
+  position: absolute;
+  left: 15px;
+  top: 3px;
+  background-color: #e64c3c;
+  color: #fff;
+  font-size: 9px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  line-height: 15px;
+  display: inline-block;
+}
+.main-content .main .box-pick .is_desktop .box_utility .list_utility > li > a i {
+  width: 20%;
+  font-size: 1.5rem;
+  margin-right: 0.3em;
+}
+.main-content .main .box-pick .flex-1 {
+  flex: 1;
+}
+.main-content .main .box-pick .flex-1 .title_cat {
+  background: url(https://cdn-img.thethao247.vn/frontend/images/bg-min.svg?v=1) -50px -864px no-repeat;
+  padding: 5px 4px 4px;
+  font-size: 9px;
+  color: #0d6eb7;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.main-content .main .box-pick .flex-1 .top-pick {
+  /* width */
+  /* Handle */
+  /* Handle on hover */
+}
+.main-content .main .box-pick .flex-1 .top-pick .w100-200 {
+  width: calc(100% - 200px);
+}
+.main-content .main .box-pick .flex-1 .top-pick .w100-200 .cover .home_main_img {
+  min-height: 100%;
+}
+.main-content .main .box-pick .flex-1 .top-pick .w100-200 .cover .content {
+  background: #f1f1f1;
+  padding: 15px;
+}
+.main-content .main .box-pick .flex-1 .top-pick .w200 {
+  width: 200px;
+}
+.main-content .main .box-pick .flex-1 .top-pick ::-webkit-scrollbar {
+  width: 3px;
+}
+.main-content .main .box-pick .flex-1 .top-pick ::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.main-content .main .box-pick .flex-1 .top-pick ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.main-content .main .box-pick .flex-1 .top-pick .scroll {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-bottom: 3px solid #f5f5f5;
+  overflow: auto;
+}
+.main-content .main .box-pick .flex-1 .top-pick .scroll .pick_right ul li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.main-content .main .box-pick .flex-1 .top-pick .scroll .pick_right ul li a {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-right: 3px;
+}
+.main-content .main .box-pick .flex-1 .bot-pick ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.main-content .main .box-pick .flex-1 .bot-pick ul li {
+  flex: 0 32%;
+}
+.main-content .main .box-pick .flex-1 .bot-pick ul li h2 {
+  font-weight: bold;
+  font-size: 14px;
+}
+.main-content .main .box-pick .flex-1 .special-line {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #0085de;
+}
+.main-content .main .list_category_news .box_latest, .main-content .main .list_category_news .box_common {
+  width: 500px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.main-content .main .list_category_news .cat-style-1 .content .title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.main-content .main .list_category_news .cat-style-1 .content .first_news .thumb, .main-content .main .list_category_news .cat-style-1 .content .first_news .text {
+  flex: 0 48%;
+}
+.main-content .main .list_category_news .cat-style-1 .content .first_news .sapo {
+  color: black;
+  font-size: 16px;
+}
+.main-content .main .list_category_news .cat-style-1 .content .list_news li {
+  margin-bottom: 2%;
+  flex: 0 48%;
+  border-bottom: none;
+}
+.main-content .main .list_category_news .cat-style-1 .content .list_news li .thumb {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+}
+.main-content .main .list_category_news .caption {
+  border-bottom: 1px solid #254892;
+  height: 22px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+.main-content .main .list_category_news .caption .more {
+  font-size: 14px;
+  color: #0d6eb7;
+}
+.main-content .main .list_category_news .caption .more:hover {
+  color: black;
+}
+.main-content .main .list_category_news .caption .title {
+  padding: 0 10px;
+  background-color: #0f408b;
+  position: relative;
+}
+.main-content .main .list_category_news .caption .title span {
+  z-index: 1;
+  position: relative;
+  font-size: 15px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  display: inline-block;
+}
+.main-content .main .list_category_news .content ul li {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #ddd;
+  flex: 1;
+}
+.main-content .main .list_category_news .content ul li .thumb {
+  width: 125px;
+}
+.main-content .main .list_category_news .content ul li .text {
+  flex: 1;
+}
+.main-content .main .list_category_news .content ul li .text .title {
+  font-size: 15px;
+  line-height: 1.5;
+  display: block;
+}
+.main-content .main .list_category_news h2, .main-content .main .list_category_news h3 {
+  font-size: 14px;
+}
+.main-content .sapo {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #666;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.main-content .flex-1 {
+  flex: 1;
+}
+.main-content ul {
+  padding: 0;
+}
+.main-content li {
+  list-style: inside none;
+}
+.main-content a {
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+}
+.main-content img {
+  border: 0 none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.main-content .text_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=home.component.css.map */

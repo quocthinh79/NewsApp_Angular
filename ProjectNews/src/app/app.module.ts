@@ -46,6 +46,7 @@ import { MdbTransferModule } from 'mdb-angular-transfer';
 import { MdbMentionModule } from 'mdb-angular-mention';
 import { MdbCookiesManagementService } from 'mdb-angular-cookies-management';
 import { MdbStorageManagementService } from 'mdb-angular-storage-management';
+import { HomeComponent } from './component/home/home.component';
 import { CatalogDetailComponent } from './component/catalog-detail/catalog-detail.component';
 
 import {FormsModule} from "@angular/forms";
@@ -56,7 +57,7 @@ import {AppRoutingModule} from "./router/app-routing.module";
 import {DataService} from "./service/data.service";
 
 @NgModule({
-  declarations: [AppComponent, CatalogDetailComponent, NavigationComponent],
+  declarations: [AppComponent, CatalogDetailComponent, NavigationComponent,HomeComponent],
   imports: [
     AppRoutingModule,
     MatToolbarModule,

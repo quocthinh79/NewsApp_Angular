@@ -15,5 +15,8 @@
     background-color: lightgrey;
   }
 }
+.navbar {
+  z-index: 9999;
+}
 
 /*# sourceMappingURL=navigation.component.css.map */
