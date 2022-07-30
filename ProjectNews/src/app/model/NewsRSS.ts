@@ -19,12 +19,6 @@ export interface IRssChannel {
   "sy:updateFrequency": Array<string>;
   item: Array<IRssItem>;
 }
-//
-// export interface IRssImage {
-//   link: Array<string>;
-//   title: Array<string>;
-//   url: Array<string>;
-// }
 
 export interface IRssItem {
   title: Array<string>;
