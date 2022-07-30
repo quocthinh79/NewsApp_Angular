@@ -54,3 +54,33 @@
 html {
   scroll-behavior: smooth;
 }
+
+@media only screen and (max-width: 600px) {
+  * {
+    font-size: 17px!important;
+  }
+
+  .w-100-res {
+    width: 100%!important;
+  }
+
+  .title-res {
+    font-size: 22px!important;
+  }
+
+  .flex-1-res {
+    flex: 1!important;
+  }
+
+  .flex-2-res {
+    flex: 2!important;
+  }
+
+  .h-45rem-res {
+    height: 45rem!important;
+  }
+
+  .h-7rem-res {
+    height: 7rem!important;
+  }
+}
