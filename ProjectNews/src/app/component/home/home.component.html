@@ -169,117 +169,34 @@
                 <div class="cover ms-2">
                   <div class="home_main_img d-flex">
                     <img
-                      src="https://cdn-img.thethao247.vn/storage/files/camhm/2022/07/23/truc-tiep-tottenham-0-0-rangers-song-sat-son-kane-xuat-tran-161546.jpg"
+                      src="{{RssDataHome.rss.channel[0].item[0].image}}"
                       style="width: 100%; height: 400px;"
-                      alt="Trực tiếp Tottenham 2-1 Rangers: Cú đúp chóng vánh của Harry Kane">
-                    <a href="https://thethao247.vn/426-truc-tiep-tottenham-vs-rangers-21h-hom-nay-23-7-d261419.html"
-                       class="thumb" title="Trực tiếp Tottenham 2-1 Rangers: Cú đúp chóng vánh của Harry Kane">
+                      alt="{{RssDataHome.rss.channel[0].item[0].title}}">
+                    <a href="{{RssDataHome.rss.channel[0].item[0].link}}"
+                       class="thumb" title="{{RssDataHome.rss.channel[0].item[0].title}}">
                     </a>
                   </div>
                   <div class="content">
                     <a href="https://thethao247.vn/bong-da-quoc-te-c2/" class="title_cat" title="Bóng đá quốc tế">Bóng
-                      đá
-                      quốc tế</a>
-                    <h2><a href="https://thethao247.vn/426-truc-tiep-tottenham-vs-rangers-21h-hom-nay-23-7-d261419.html"
-                           class="title" title="Trực tiếp Tottenham 2-1 Rangers: Cú đúp chóng vánh của Harry Kane">Trực
-                      tiếp Tottenham 2-1 Rangers: Cú đúp chóng vánh của Harry Kane </a>
+                      đá quốc tế</a>
+                    <h2><a href="{{RssDataHome.rss.channel[0].item[0].link}}"
+                           class="title"
+                           title="{{RssDataHome.rss.channel[0].item[0].title}}">{{RssDataHome.rss.channel[0].item[0].title}}</a>
                     </h2>
-                    <p class="sapo">(Trực tiếp bóng đá Tottenham vs Rangers) - Mặc dù đã bổ sung rất nhiều những bản hợp
-                      đồng chất lượng trong phiên chợ hè 2022, tuy nhiên Tottenham vẫn chưa thể khiến người hâm mộ cảm
-                      thấy yên tâm sau những trận giao hữu vừa qua.</p>
+                    <p
+                      class="sapo">{{RssDataHome.rss.channel[0].item[0].description.toString().slice(RssDataHome.rss.channel[0].item[0].description.toString().lastIndexOf(">") + 1, RssDataHome.rss.channel[0].item[0].description.toString().length)}}</p>
                   </div>
                 </div>
               </div>
               <div class="w200 scroll me-2">
                 <div class="pick_right ps-3">
                   <ul class="p-0">
-                    <li>
+                    <li *ngFor="let x of forRange(2, 11)">
                       <h3>
                         <a
-                          href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
-                          class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
-                          class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
-                        </a>
-                      </h3>
-                    </li>
-                    <li>
-                      <h3>
-                        <a
-                          href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
-                          class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
-                          class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
-                        </a>
-                      </h3>
-                    </li>
-                    <li>
-                      <h3>
-                        <a
-                          href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
-                          class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
-                          class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
-                        </a>
-                      </h3>
-                    </li>
-                    <li>
-                      <h3>
-                        <a
-                          href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
-                          class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
-                          class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
-                        </a>
-                      </h3>
-                    </li>
-                    <li>
-                      <h3>
-                        <a
-                          href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
-                          class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
-                          class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
-                        </a>
-                      </h3>
-                    </li>
-                    <li>
-                      <h3>
-                        <a
-                          href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
-                          class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
-                          class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
-                        </a>
-                      </h3>
-                    </li>
-                    <li>
-                      <h3>
-                        <a
-                          href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
-                          class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
-                          class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
-                        </a>
-                      </h3>
-                    </li>
-                    <li>
-                      <h3>
-                        <a
-                          href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
-                          class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
-                          class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
-                        </a>
-                      </h3>
-                    </li>
-                    <li>
-                      <h3>
-                        <a
-                          href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
-                          class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
-                          class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
-                        </a>
-                      </h3>
-                    </li>
-                    <li>
-                      <h3>
-                        <a
-                          href="https://thethao247.vn/406-nguoi-hung-u23-viet-nam-tu-tin-truoc-co-hoi-chao-san-tai-v-league-d261516.html"
-                          class="title" title="Người hùng U23 Việt Nam tự tin trước cơ hội chào sân tại V-League"><span
-                          class="special-line">Người hùng U23 Việt Nam tự tin</span> trước cơ hội chào sân tại V-League
+                          href="{{RssDataHome.rss.channel[0].item[x].link}}"
+                          class="title"
+                          title="{{RssDataHome.rss.channel[0].item[x].title}}">{{RssDataHome.rss.channel[0].item[x].title}}
                         </a>
                       </h3>
                     </li>
@@ -289,58 +206,22 @@
             </div>
             <div class="bot-pick mx-2">
               <ul>
-                <li>
+                <li *ngFor="let x of forRange(12, 15)">
                   <a
-                    href="https://thethao247.vn/402-nguoi-dai-dien-giai-thich-nguyen-nhan-van-hau-khong-the-thi-dau-o-ha-lan-d261471.html"
+                    href="{{RssDataHome.rss.channel[0].item[x].link}}"
                     class="thumb fw-bold"
-                    title="Người đại diện giải thích nguyên nhân Văn Hậu không thể thi đấu ở Hà Lan">
+                    title="{{RssDataHome.rss.channel[0].item[x].title}}">
                     <img
-                      src="https://cdn-img.thethao247.vn/resize_389x234/storage/files/ngachelsea/2022/07/21/doan-van-hau-van-chua-the-khien-hlv-park-hang-seo-yen-tam-160541.jpg"
+                      src="{{RssDataHome.rss.channel[0].item[x].image}}"
                       width="389" height="234"
-                      alt="Người đại diện giải thích nguyên nhân Văn Hậu không thể thi đấu ở Hà Lan"></a>
+                      alt="{{RssDataHome.rss.channel[0].item[x].title}}"></a>
                   <div class="content">
                     <a href="https://thethao247.vn/bong-da-viet-nam-c1/" class="title_cat" title="Bóng đá Việt Nam">Bóng
                       đá Việt Nam</a>
                     <h2><a
-                      href="https://thethao247.vn/402-nguoi-dai-dien-giai-thich-nguyen-nhan-van-hau-khong-the-thi-dau-o-ha-lan-d261471.html"
-                      class="title" title="Người đại diện giải thích nguyên nhân Văn Hậu không thể thi đấu ở Hà Lan">Người
-                      đại diện giải thích nguyên nhân <span
-                        class="special-line">Văn Hậu không thể thi đấu ở Hà Lan</span></a>
-                    </h2></div>
-                </li>
-                <li>
-                  <a
-                    href="https://thethao247.vn/420-he-lo-ly-do-viet-nam-tu-choi-loi-moi-tham-du-kings-cup-cua-thai-lan-d261479.html"
-                    class="thumb" title="Hé lộ lý do Việt Nam từ chối lời mời tham dự King's Cup của Thái Lan"><img
-                    class=""
-                    src="https://cdn-img.thethao247.vn/resize_389x234/storage/files/minhnp/2022/07/23/vietnam-thailan1-1658584897.jpg"
-                    width="389" height="234"
-                    alt="Hé lộ lý do Việt Nam từ chối lời mời tham dự King's Cup của Thái Lan"></a>
-                  <div class="content">
-                    <a href="https://thethao247.vn/bong-da-viet-nam-c1/" class="title_cat" title="Bóng đá Việt Nam">Bóng
-                      đá Việt Nam</a>
-                    <h2><a
-                      href="https://thethao247.vn/420-he-lo-ly-do-viet-nam-tu-choi-loi-moi-tham-du-kings-cup-cua-thai-lan-d261479.html"
-                      class="title" title="Hé lộ lý do Việt Nam từ chối lời mời tham dự King's Cup của Thái Lan"><span
-                      class="special-line">Hé lộ lý do Việt Nam từ chối lời mời tham dự King's Cup</span> của Thái
-                      Lan</a>
-                    </h2></div>
-                </li>
-                <li>
-                  <a href="https://thethao247.vn/420-ket-qua-binh-dinh-vs-da-nang-18h00-hom-nay-23-07-d261450.html"
-                     class="thumb" title="Đình Trọng mắc sai lầm, Bình Định 'thua đau' Đà Nẵng trên sân nhà"><img
-                    class=""
-                    src="https://cdn-img.thethao247.vn/resize_389x234/storage/files/minhnp/2022/07/23/dinh-trong-mac-sai-lam-binh-dinh-thua-dau-da-nang-tren-san-nha-161532.jpg"
-                    width="389"
-                    height="234"
-                    alt="Đình Trọng mắc sai lầm, Bình Định 'thua đau' Đà Nẵng trên sân nhà"></a>
-                  <div class="content">
-                    <a href="https://thethao247.vn/bong-da-viet-nam-c1/" class="title_cat" title="Bóng đá Việt Nam">Bóng
-                      đá Việt Nam</a>
-                    <h2><a
-                      href="https://thethao247.vn/420-ket-qua-binh-dinh-vs-da-nang-18h00-hom-nay-23-07-d261450.html"
-                      class="title" title="Đình Trọng mắc sai lầm, Bình Định 'thua đau' Đà Nẵng trên sân nhà">Đình
-                      Trọng mắc sai lầm, <span class="special-line">Bình Định 'thua đau' Đà Nẵng trên sân nhà</span></a>
+                      href="{{RssDataHome.rss.channel[0].item[x].link}}"
+                      class="title"
+                      title="{{RssDataHome.rss.channel[0].item[x].title}}">{{RssDataHome.rss.channel[0].item[x].title}}</a>
                     </h2></div>
                 </li>
               </ul>
@@ -359,186 +240,19 @@
               </div>
               <div class="content">
                 <ul>
-                  <li>
+                  <li *ngFor="let x of forRange(11, 25)">
                     <a
-                      href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                      class="thumb me-3" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"><img class=""
-                                                                                             src="https://cdn-img.thethao247.vn/resize_248x178/storage/files/anhdat/2022/07/11/vcs-mua-he-2022-1657525706.jpg"
-                                                                                             width="248" height="178"
-                                                                                             alt="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"></a>
+                      href="{{RssDataHome.rss.channel[0].item[x].link}}"
+                      class="thumb me-3" title="{{RssDataHome.rss.channel[0].item[x].title}}">
+                      <img class=""
+                           src="{{RssDataHome.rss.channel[0].item[x].image}}"
+                           width="248" height="178"
+                           alt="{{RssDataHome.rss.channel[0].item[x].title}}"></a>
                     <div class="text flex-1">
                       <h3><a href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                             class="title" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất">Bảng xếp hạng VCS Mùa Hè 2022
-                        mới nhất</a></h3>
-                    </div>
-                  </li>
-                  <li>
-                    <a
-                      href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                      class="thumb me-3" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"><img class=""
-                                                                                             src="https://cdn-img.thethao247.vn/resize_248x178/storage/files/anhdat/2022/07/11/vcs-mua-he-2022-1657525706.jpg"
-                                                                                             width="248" height="178"
-                                                                                             alt="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"></a>
-                    <div class="text flex-1">
-                      <h3><a href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                             class="title" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất">Bảng xếp hạng VCS Mùa Hè 2022
-                        mới nhất</a></h3>
-                    </div>
-                  </li>
-                  <li>
-                    <a
-                      href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                      class="thumb me-3" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"><img class=""
-                                                                                             src="https://cdn-img.thethao247.vn/resize_248x178/storage/files/anhdat/2022/07/11/vcs-mua-he-2022-1657525706.jpg"
-                                                                                             width="248" height="178"
-                                                                                             alt="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"></a>
-                    <div class="text flex-1">
-                      <h3><a href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                             class="title" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất">Bảng xếp hạng VCS Mùa Hè 2022
-                        mới nhất</a></h3>
-                    </div>
-                  </li>
-                  <li>
-                    <a
-                      href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                      class="thumb me-3" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"><img class=""
-                                                                                             src="https://cdn-img.thethao247.vn/resize_248x178/storage/files/anhdat/2022/07/11/vcs-mua-he-2022-1657525706.jpg"
-                                                                                             width="248" height="178"
-                                                                                             alt="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"></a>
-                    <div class="text flex-1">
-                      <h3><a href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                             class="title" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất">Bảng xếp hạng VCS Mùa Hè 2022
-                        mới nhất</a></h3>
-                    </div>
-                  </li>
-                  <li>
-                    <a
-                      href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                      class="thumb me-3" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"><img class=""
-                                                                                             src="https://cdn-img.thethao247.vn/resize_248x178/storage/files/anhdat/2022/07/11/vcs-mua-he-2022-1657525706.jpg"
-                                                                                             width="248" height="178"
-                                                                                             alt="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"></a>
-                    <div class="text flex-1">
-                      <h3><a href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                             class="title" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất">Bảng xếp hạng VCS Mùa Hè 2022
-                        mới nhất</a></h3>
-                    </div>
-                  </li>
-                  <li>
-                    <a
-                      href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                      class="thumb me-3" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"><img class=""
-                                                                                             src="https://cdn-img.thethao247.vn/resize_248x178/storage/files/anhdat/2022/07/11/vcs-mua-he-2022-1657525706.jpg"
-                                                                                             width="248" height="178"
-                                                                                             alt="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"></a>
-                    <div class="text flex-1">
-                      <h3><a href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                             class="title" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất">Bảng xếp hạng VCS Mùa Hè 2022
-                        mới nhất</a></h3>
-                    </div>
-                  </li>
-                  <li>
-                    <a
-                      href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                      class="thumb me-3" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"><img class=""
-                                                                                             src="https://cdn-img.thethao247.vn/resize_248x178/storage/files/anhdat/2022/07/11/vcs-mua-he-2022-1657525706.jpg"
-                                                                                             width="248" height="178"
-                                                                                             alt="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"></a>
-                    <div class="text flex-1">
-                      <h3><a href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                             class="title" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất">Bảng xếp hạng VCS Mùa Hè 2022
-                        mới nhất</a></h3>
-                    </div>
-                  </li>
-                  <li>
-                    <a
-                      href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                      class="thumb me-3" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"><img class=""
-                                                                                             src="https://cdn-img.thethao247.vn/resize_248x178/storage/files/anhdat/2022/07/11/vcs-mua-he-2022-1657525706.jpg"
-                                                                                             width="248" height="178"
-                                                                                             alt="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"></a>
-                    <div class="text flex-1">
-                      <h3><a href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                             class="title" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất">Bảng xếp hạng VCS Mùa Hè 2022
-                        mới nhất</a></h3>
-                    </div>
-                  </li>
-                  <li>
-                    <a
-                      href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                      class="thumb me-3" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"><img class=""
-                                                                                             src="https://cdn-img.thethao247.vn/resize_248x178/storage/files/anhdat/2022/07/11/vcs-mua-he-2022-1657525706.jpg"
-                                                                                             width="248" height="178"
-                                                                                             alt="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"></a>
-                    <div class="text flex-1">
-                      <h3><a href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                             class="title" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất">Bảng xếp hạng VCS Mùa Hè 2022
-                        mới nhất</a></h3>
-                    </div>
-                  </li>
-                  <li>
-                    <a
-                      href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                      class="thumb me-3" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"><img class=""
-                                                                                             src="https://cdn-img.thethao247.vn/resize_248x178/storage/files/anhdat/2022/07/11/vcs-mua-he-2022-1657525706.jpg"
-                                                                                             width="248" height="178"
-                                                                                             alt="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"></a>
-                    <div class="text flex-1">
-                      <h3><a href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                             class="title" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất">Bảng xếp hạng VCS Mùa Hè 2022
-                        mới nhất</a></h3>
-                    </div>
-                  </li>
-                  <li>
-                    <a
-                      href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                      class="thumb me-3" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"><img class=""
-                                                                                             src="https://cdn-img.thethao247.vn/resize_248x178/storage/files/anhdat/2022/07/11/vcs-mua-he-2022-1657525706.jpg"
-                                                                                             width="248" height="178"
-                                                                                             alt="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"></a>
-                    <div class="text flex-1">
-                      <h3><a href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                             class="title" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất">Bảng xếp hạng VCS Mùa Hè 2022
-                        mới nhất</a></h3>
-                    </div>
-                  </li>
-                  <li>
-                    <a
-                      href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                      class="thumb me-3" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"><img class=""
-                                                                                             src="https://cdn-img.thethao247.vn/resize_248x178/storage/files/anhdat/2022/07/11/vcs-mua-he-2022-1657525706.jpg"
-                                                                                             width="248" height="178"
-                                                                                             alt="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"></a>
-                    <div class="text flex-1">
-                      <h3><a href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                             class="title" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất">Bảng xếp hạng VCS Mùa Hè 2022
-                        mới nhất</a></h3>
-                    </div>
-                  </li>
-                  <li>
-                    <a
-                      href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                      class="thumb me-3" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"><img class=""
-                                                                                             src="https://cdn-img.thethao247.vn/resize_248x178/storage/files/anhdat/2022/07/11/vcs-mua-he-2022-1657525706.jpg"
-                                                                                             width="248" height="178"
-                                                                                             alt="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"></a>
-                    <div class="text flex-1">
-                      <h3><a href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                             class="title" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất">Bảng xếp hạng VCS Mùa Hè 2022
-                        mới nhất</a></h3>
-                    </div>
-                  </li>
-                  <li>
-                    <a
-                      href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                      class="thumb me-3" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"><img class=""
-                                                                                             src="https://cdn-img.thethao247.vn/resize_248x178/storage/files/anhdat/2022/07/11/vcs-mua-he-2022-1657525706.jpg"
-                                                                                             width="248" height="178"
-                                                                                             alt="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất"></a>
-                    <div class="text flex-1">
-                      <h3><a href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
-                             class="title" title="Bảng xếp hạng VCS Mùa Hè 2022 mới nhất">Bảng xếp hạng VCS Mùa Hè 2022
-                        mới nhất</a></h3>
+                             class="title"
+                             title="{{RssDataHome.rss.channel[0].item[x].title}}">{{RssDataHome.rss.channel[0].item[x].title}}</a>
+                      </h3>
                     </div>
                   </li>
                 </ul>
