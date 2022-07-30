@@ -1,4 +1,4 @@
-import {ApplicationRef, Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import * as xml2js from "xml2js";
 import {RSSNews} from "../../model/NewsRSS";
@@ -20,14 +20,14 @@ export class CatalogDetailComponent implements OnInit, OnDestroy {
     })
   }
 
-  getRssFeedData(paramater: string) {
-    this.service.getDataRss(paramater).subscribe(data => {
-      let parseString = xml2js.parseString;
-      parseString(data, (err, result: RSSNews) => {
-        this.RssData = result;
+    getRssFeedData(paramater: string) {
+      this.service.getDataRss(paramater).subscribe(data => {
+        let parseString = xml2js.parseString;
+        parseString(data, (err, result: RSSNews) => {
+          this.RssData = result;
+        });
       });
-    });
-  }
+    }
 
   forRange(start: number, end: number) {
     const array = [];
