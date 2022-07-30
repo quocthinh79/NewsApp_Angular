@@ -4,10 +4,6 @@ import * as xml2js from "xml2js";
 import {RSSNews} from "../../model/NewsRSS";
 import {ActivatedRoute, Router, NavigationEnd } from "@angular/router";
 import {DataService} from "../../service/data.service";
-import {Observable} from "rxjs";
-import axios from "axios";
-import cheerio, {html} from "cheerio";
-import {response} from "express";
 
 @Component({
   selector: 'app-catalog-detail',
