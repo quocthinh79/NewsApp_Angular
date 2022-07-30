@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*!
  * Bootstrap Grid v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -5049,3 +5050,23 @@
 }
 
 /*# sourceMappingURL=bootstrap-grid.css.map */
+=======
+/* Error: expected ")".
+ *     ,
+ * 173 |           100: 100%,
+ *     |                     ^
+ *     '
+ *   _utilities.scss 173:21    @import
+ *   bootstrap-grid.scss 26:9  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected ")".\a     \2577 \a 173 \2502            100: 100%,\d\a     \2502                      ^\a     \2575 \a   _utilities.scss 173:21    @import\a   bootstrap-grid.scss 26:9  root stylesheet';
+}
+>>>>>>> main

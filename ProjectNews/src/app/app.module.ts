@@ -47,10 +47,22 @@ import { MdbMentionModule } from 'mdb-angular-mention';
 import { MdbCookiesManagementService } from 'mdb-angular-cookies-management';
 import { MdbStorageManagementService } from 'mdb-angular-storage-management';
 import { HomeComponent } from './home/home.component';
+import { CatalogDetailComponent } from './component/catalog-detail/catalog-detail.component';
+
+import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import { NavigationComponent } from './component/navigation/navigation.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {AppRoutingModule} from "./router/app-routing.module";
+import {DataService} from "./service/data.service";
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, CatalogDetailComponent, NavigationComponent,HomeComponent],
   imports: [
+    AppRoutingModule,
+    MatToolbarModule,
+    HttpClientModule,
+    FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     MdbAccordionModule,
@@ -95,7 +107,7 @@ import { HomeComponent } from './home/home.component';
     MdbTransferModule,
     MdbMentionModule,
   ],
-  providers: [MdbCookiesManagementService, MdbStorageManagementService],
+  providers: [MdbCookiesManagementService, MdbStorageManagementService, DataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
