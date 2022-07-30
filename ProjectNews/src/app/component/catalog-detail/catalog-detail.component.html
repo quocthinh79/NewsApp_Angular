@@ -1,15 +1,15 @@
 <div id="catalog" class=" h-auto d-flex justify-content-center align-items-start bg-cover ">
-  <div class="w-50 h-100 p-3 bg-white mt-35rem w-100-res">
+  <div class="w-wrap h-100 p-3 bg-white w-100-res min-w-570px">
     <div class="header d-flex flex-column h-30rem h-45rem-res">
-      <div class="title fs-2 text fw-bold mb-3">
+      <div class="title fs-2 text fw-bold">
         {{RssData.rss.channel[0].title}}
       </div>
       <div class="big-news flex-1 d-flex bg-big-news mb-3 flex-column flex-sm-row">
-        <a href="{{RssData.rss.channel[0].item[0].link}}" class="image-big-news flex-1 bg-center" style="background-size: cover ;background-image: url({{RssData.rss.channel[0].item[0].image}})">
+        <a href="{{RssData.rss.channel[0].item[0].link}}" title="{{RssData.rss.channel[0].item[0].title}}" class="image-big-news flex-1 bg-center" style="background-size: cover ;background-image: url({{RssData.rss.channel[0].item[0].image}})">
 
         </a>
         <div class="right-content-big-news flex-1 mx-3 my-2">
-            <a href="{{RssData.rss.channel[0].item[0].link}}" class="title fw-bold fs-5 text mb-2 title-res">
+            <a title="{{RssData.rss.channel[0].item[0].title}}" href="{{RssData.rss.channel[0].item[0].link}}" class="title fw-bold fs-5 text mb-2 title-res">
               {{RssData.rss.channel[0].item[0].title}}
             </a>
           <div class="content mt-sm-0 mt-3">
@@ -20,12 +20,12 @@
       <!--Item-->
       <div class="small-news flex-1 d-sm-flex flex-sm-row flex-column justify-content-between ">
         <!--Item small-->
-        <div class="item-small-news w-200 d-flex flex-row flex-sm-column m-0 w-100-res m-sm-2 h-7rem-res"
+        <div class="item-small-news w-18rem d-flex flex-row flex-sm-column m-0 w-100-res h-7rem-res"
              *ngFor="let x of forRange(1, 4)">
-          <a href="{{RssData.rss.channel[0].item[x].link}}" class="img flex-3 flex-1-res mb-2 bg-center" style="background-size: cover ;background-image: url({{RssData.rss.channel[0].item[x].image}})">
+          <a href="{{RssData.rss.channel[0].item[x].link}}" title="{{RssData.rss.channel[0].item[x].title}}" class="img flex-3 flex-1-res mb-2 bg-center" style="background-size: cover ;background-image: url({{RssData.rss.channel[0].item[x].image}})">
 
           </a>
-          <a href="{{RssData.rss.channel[0].item[x].link}}" class="content flex-1 flex-1-res fw-bold fs-6 text ml-3 m-sm-0">
+          <a title="{{RssData.rss.channel[0].item[x].title}}" href="{{RssData.rss.channel[0].item[x].link}}" class="content flex-1 flex-1-res fw-bold fs-6 text ml-3 m-sm-0 min-h-50px text-ellipsis">
             {{RssData.rss.channel[0].item[x].title}}
           </a>
         </div>
@@ -38,11 +38,11 @@
       <div
         *ngFor="let x of forRange(4, RssData.rss.channel[0].item.length)">
         <div class="item d-flex flex-row h-140 mb-4">
-          <a href="{{RssData.rss.channel[0].item[x].link}}" class="image flex-1 flex-1-res bg-center" style="background-size: cover ;background-image: url({{RssData.rss.channel[0].item[x].image}})">
+          <a href="{{RssData.rss.channel[0].item[x].link}}" title="{{RssData.rss.channel[0].item[x].title}}" class="image flex-1 flex-1-res bg-center" style="background-size: cover ;background-image: url({{RssData.rss.channel[0].item[x].image}})">
 
           </a>
           <div class="content-item flex-3 flex-1-res ms-3 d-flex flex-column">
-            <a href="{{RssData.rss.channel[0].item[x].link}}" class="title-item fw-bold fs-5 text mb-2">
+            <a href="{{RssData.rss.channel[0].item[x].link}}" title="{{RssData.rss.channel[0].item[x].title}}" class="title-item fw-bold fs-5 text mb-2">
               {{RssData.rss.channel[0].item[x].title}}
             </a>
             <div class="detail-content text-content overflow-hidden d-sm-block d-none">

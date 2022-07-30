@@ -1,9 +1,32 @@
+* {
+  line-height: 1.5;
+}
+
 .h-140 {
   height: 9rem;
 }
 
-.w-200 {
-  width: 18rem;
+.w-wrap {
+  width: 55.5555555556%;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+.min-h-50px {
+  min-height: 50px;
+}
+
+.min-w-570px {
+  min-width: 570px;
+}
+
+.w-18rem {
+  width: calc(33.3333333333% - 5px);
 }
 
 .flex-1 {
@@ -55,9 +78,14 @@ html {
   scroll-behavior: smooth;
 }
 
+.min-w-fit {
+  min-width: fit-content;
+}
+
 @media only screen and (max-width: 600px) {
   * {
     font-size: 17px !important;
+    line-height: 1.5;
   }
 
   .w-100-res {
