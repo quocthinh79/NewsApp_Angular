@@ -37,14 +37,29 @@ export class NavigationComponent implements OnInit {
     }
   }
 
-  @ViewChildren('itemNav')
-  public itemNav!: QueryList<ElementRef<HTMLLIElement>>
-  clickItemNav() {
-    $(this).closest('.nav-item dropdown').css('display')
-    console.log()
-    this.itemNav.forEach(x => {
-      console.log(x.nativeElement.closest('.nav-item dropdown'))
+
+  @ViewChildren('listItem')
+  public listItems!: QueryList<ElementRef<HTMLLIElement>>
+
+  showEsports: boolean = false;
+  showBongDaViet: boolean = false;
+  showBongDaQte: boolean = false;
+  showTheThao: boolean = false;
+  showXe: boolean = false;
+  showVo: boolean = false;
+  showXuHuong: boolean = false;
+
+  toggleItemDropDown() {
+/*    this.showEsports = false;
+    this.showBongDaViet = false;
+    this.showBongDaQte = false;
+    this.showTheThao = false;
+    this.showXe = false;
+    this.showVo = false;
+    this.showXuHuong = false;*/
+    this.listItems.forEach(x => {
+
+      x.nativeElement.style.display = 'none'
     })
   }
-
 }
