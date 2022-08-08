@@ -1,4 +1,5 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
+import $ from 'jquery';
 
 @Component({
   selector: 'app-navigation',
@@ -25,6 +26,25 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+  @ViewChild("main_nav") mainNav: ElementRef;
+
+  clickButtonNav() {
+    if (this.mainNav.nativeElement.style.display === '' || this.mainNav.nativeElement.style.display === 'none') {
+      this.mainNav.nativeElement.style.display = 'flex'
+    } else {
+      this.mainNav.nativeElement.style.display = 'none'
+    }
+  }
+
+  @ViewChildren('itemNav')
+  public itemNav!: QueryList<ElementRef<HTMLLIElement>>
+  clickItemNav() {
+    $(this).closest('.nav-item dropdown').css('display')
+    console.log()
+    this.itemNav.forEach(x => {
+      console.log(x.nativeElement.closest('.nav-item dropdown'))
+    })
   }
 
 }
