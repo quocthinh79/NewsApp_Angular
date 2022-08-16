@@ -63,7 +63,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     this.getRssFeedDataHome("trang-chu")
     this.getRssDataBongDaVN("bong-da-viet-nam-c1")
     this.getRssDataBundesliga("bundes-liga-c65")
