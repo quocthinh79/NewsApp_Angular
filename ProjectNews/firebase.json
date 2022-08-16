@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/mdb5-angular-ui-kit-pro-advanced",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
