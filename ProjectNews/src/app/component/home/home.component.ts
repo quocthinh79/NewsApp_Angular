@@ -67,6 +67,8 @@ export class HomeComponent implements OnInit {
     this.getRssDataBongDaVN("bong-da-viet-nam-c1")
     this.getRssDataBundesliga("bundes-liga-c65")
     this.getRssDataQuocTe("bong-da-quoc-te-c2")
+
+    this.service.getDataHtml("")
   }
 
 }

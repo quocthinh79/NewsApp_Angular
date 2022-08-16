@@ -35,6 +35,7 @@ export class DataService {
     axios("https://thethao247.vn/406-ket-qua-v-league-2022-tp-hcm-vs-hai-phong-29-07-2022-d261910.html").then(response => {
       const html = response.data
       const $ = cheerio.load(html)
+      console.log($('#content_detail').text())
       console.log($('#content_detail').html())
     })
   }

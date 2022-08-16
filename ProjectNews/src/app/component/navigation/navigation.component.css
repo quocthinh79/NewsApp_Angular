@@ -45,6 +45,19 @@
   .navbar-collapse {
     align-items: normal !important;
   }
+
+  .nofixed {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  #catalog {
+    display: block !important;
+  }
+
+  .nofixed {
+    width: 36rem;
+  }
 }
 
 /*# sourceMappingURL=navigation.component.css.map */
