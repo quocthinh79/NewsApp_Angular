@@ -7,7 +7,7 @@
     <div #main_nav class="collapse navbar-collapse flex-column flex-lg-row d-lg-flex align-items-center justify-content-center flex-wrap" id="main_nav">
       <ul class="navbar-nav mx-3">
         <li class="nav-item dropdown">
-          <a class="nav-link text-uppercase text-black" (click)="reload('esports-c180')" routerLink="esports-c180" data-bs-toggle="dropdown">Esports</a>
+          <a class="nav-link text-uppercase text-black" (mouseover)="hover()" (click)="reload('esports-c180')" routerLink="esports-c180" data-bs-toggle="dropdown">Esports</a>
           <ul #listItem class="dropdown-menu">
             <li><a class="dropdown-item p-2" (click)="reload('lien-minh-huyen-thoai-c181')" routerLink="lien-minh-huyen-thoai-c181">Liên Minh Huyền Thoại</a></li>
             <li><a class="dropdown-item p-2" (click)="reload('dau-truong-chan-ly-c303')" routerLink="dau-truong-chan-ly-c303">Đấu Trường Chân Lý</a></li>
@@ -25,7 +25,7 @@
       </ul>
       <ul class="navbar-nav mx-3">
         <li class="nav-item dropdown">
-          <a class="nav-link text-uppercase text-black text-truncate" (click)="reload('bong-da-viet-nam-c1')" routerLink="bong-da-viet-nam-c1" data-bs-toggle="dropdown">bóng đá việt nam</a>
+          <a class="nav-link text-uppercase text-black text-truncate" (mouseover)="hover()" (click)="reload('bong-da-viet-nam-c1')" routerLink="bong-da-viet-nam-c1" data-bs-toggle="dropdown">bóng đá việt nam</a>
           <ul #listItem class="dropdown-menu">
             <li><a class="dropdown-item p-2" (click)="reload('v-league-c15')" routerLink="v-league-c15">V-League</a></li>
             <li><a class="dropdown-item p-2" (click)="reload('tuyen-quoc-gia-vn-c19')" routerLink="tuyen-quoc-gia-vn-c19">Đội tuyển Quốc gia</a></li>
@@ -41,7 +41,7 @@
       </ul>
       <ul class="navbar-nav mx-3">
         <li class="nav-item dropdown">
-          <a class="nav-link text-uppercase text-black text-truncate" (click)="reload('bong-da-quoc-te-c2')" routerLink="bong-da-quoc-te-c2" href="#" data-bs-toggle="dropdown">Bóng đã quốc tế</a>
+          <a class="nav-link text-uppercase text-black text-truncate" (mouseover)="hover()" (click)="reload('bong-da-quoc-te-c2')" routerLink="bong-da-quoc-te-c2" href="#" data-bs-toggle="dropdown">Bóng đã quốc tế</a>
           <ul #listItem class="dropdown-menu">
             <li><a class="dropdown-item p-2" (click)="reload('bong-da-anh-c8')" routerLink="bong-da-anh-c8">Bóng đá Anh</a></li>
             <li><a class="dropdown-item p-2" (click)="reload('bong-da-duc-c11')" routerLink="bong-da-duc-c11">Bóng đá Đức</a></li>
@@ -55,7 +55,7 @@
       </ul>
       <ul class="navbar-nav mx-3">
         <li class="nav-item dropdown">
-          <a class="nav-link text-uppercase text-black text-truncate" (click)="reload('the-thao-tong-hop-c5')" routerLink="the-thao-tong-hop-c5" data-bs-toggle="dropdown">Thể Thao tổng hợp</a>
+          <a class="nav-link text-uppercase text-black text-truncate" (mouseover)="hover()" (click)="reload('the-thao-tong-hop-c5')" routerLink="the-thao-tong-hop-c5" data-bs-toggle="dropdown">Thể Thao tổng hợp</a>
           <ul #listItem class="dropdown-menu">
             <li><a class="dropdown-item p-2" (click)="reload('quan-vot-tennis-c4')" routerLink="quan-vot-tennis-c4">Quần vợt</a></li>
             <li><a class="dropdown-item p-2" (click)="reload('bong-ro-c43')" routerLink="bong-ro-c43">Bóng rổ</a></li>
@@ -71,7 +71,7 @@
       </ul>
       <ul class="navbar-nav mx-3">
         <li class="nav-item dropdown">
-          <a class="nav-link text-uppercase text-black text-truncate" (click)="reload('tin-chuyen-nhuong-c14')" routerLink="tin-chuyen-nhuong-c14" data-bs-toggle="dropdown">Chuyển nhượng</a>
+          <a class="nav-link text-uppercase text-black text-truncate" (mouseover)="hover()" (click)="reload('tin-chuyen-nhuong-c14')" routerLink="tin-chuyen-nhuong-c14" data-bs-toggle="dropdown">Chuyển nhượng</a>
         </li>
       </ul>
       <ul class="navbar-nav mx-3">
@@ -89,7 +89,7 @@
       </ul>
       <ul class="navbar-nav mx-3">
         <li class="nav-item dropdown">
-          <a class="nav-link text-uppercase text-black text-truncate" (click)="reload('vo-thuat-c228')" routerLink="vo-thuat-c228" data-bs-toggle="dropdown">võ</a>
+          <a class="nav-link text-uppercase text-black text-truncate" (mouseover)="hover()" (click)="reload('vo-thuat-c228')" routerLink="vo-thuat-c228" data-bs-toggle="dropdown">võ</a>
           <ul #listItem class="dropdown-menu">
             <li><a class="dropdown-item p-2" (click)="reload('tin-tuc-c296')" routerLink="tin-tuc-c296">Tin tức</a></li>
             <li><a class="dropdown-item p-2" (click)="reload('ki-thuat-tap-luyen-c254')" routerLink="ki-thuat-tap-luyen-c254">Kĩ thuật - Tập luyện</a></li>
@@ -99,12 +99,12 @@
       </ul>
       <ul class="navbar-nav mx-3">
         <li class="nav-item dropdown">
-          <a class="nav-link text-uppercase text-black text-truncate" (click)="reload('list-c261')" routerLink="list-c261" data-bs-toggle="dropdown">KHỎE & ĐẸP</a>
+          <a class="nav-link text-uppercase text-black text-truncate" (mouseover)="hover()" (click)="reload('list-c261')" routerLink="list-c261" data-bs-toggle="dropdown">KHỎE & ĐẸP</a>
         </li>
       </ul>
       <ul class="navbar-nav mx-3">
         <li class="nav-item dropdown">
-          <a class="nav-link text-uppercase text-black text-truncate" (click)="reload('can-biet-c123')" routerLink="can-biet-c123" data-bs-toggle="dropdown">Xu hướng</a>
+          <a class="nav-link text-uppercase text-black text-truncate" (mouseover)="hover()" (click)="reload('can-biet-c123')" routerLink="can-biet-c123" data-bs-toggle="dropdown">Xu hướng</a>
           <ul #listItem class="dropdown-menu">
             <li><a class="dropdown-item p-2" (click)="reload('suc-khoe-the-thao-c124')" routerLink="suc-khoe-the-thao-c124">Sức khỏe & thể thao</a></li>
             <li><a class="dropdown-item p-2" (click)="reload('dia-diem-the-thao-c125')" routerLink="dia-diem-the-thao-c125">Địa điểm & thể thao</a></li>

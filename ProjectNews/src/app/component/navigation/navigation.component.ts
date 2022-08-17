@@ -41,8 +41,22 @@ export class NavigationComponent implements OnInit {
   @ViewChildren('listItem')
   public listItems!: QueryList<ElementRef<HTMLLIElement>>
 
+  @ViewChild('main_nav') main_nav: ElementRef;
+
   reload(uri:string) {
       this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
         this.router.navigate([uri]));
+    this.listItems.forEach(x => {
+      x.nativeElement.style.display = 'none'
+    })
+    if (document.documentElement.clientWidth <= 990) {
+      this.main_nav.nativeElement.style.display = 'none'
+    }
+  }
+
+  hover() {
+    this.listItems.forEach(x => {
+      x.nativeElement.removeAttribute("style")
+    })
   }
 }
