@@ -41,6 +41,7 @@
     "mdb-angular-ui-kit": "file:mdb-angular-ui-kit-2.2.0.tgz",
     "mdb-angular-vector-maps": "file:mdb-angular-vector-maps-2.0.0.tgz",
     "mdb-angular-wysiwyg": "file:mdb-angular-wysiwyg-2.0.0.tgz",
+    "ng2-search-filter": "^0.5.1",
     "popper.js": "^1.14.3",
     "request": "^2.88.2",
     "rss-parser": "^3.12.0",
