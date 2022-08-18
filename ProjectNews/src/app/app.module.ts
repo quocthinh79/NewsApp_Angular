@@ -55,9 +55,11 @@ import { NavigationComponent } from './component/navigation/navigation.component
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {AppRoutingModule} from "./router/app-routing.module";
 import {DataService} from "./service/data.service";
+import { HaGiaPipe } from './ha-gia.pipe';
+import { OnSavePipe } from './on-save.pipe';
 
 @NgModule({
-  declarations: [AppComponent, CatalogDetailComponent, NavigationComponent,HomeComponent],
+  declarations: [AppComponent, CatalogDetailComponent, NavigationComponent,HomeComponent, HaGiaPipe, OnSavePipe],
   imports: [
     AppRoutingModule,
     MatToolbarModule,
