@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-white" (scroll)="onScroll()" [ngClass]="navbarFixed ? 'fixed' : 'nofixed'">
   <div class="container-fluid">
-    <a class="navbar-brand text-primary" routerLink="/">Tin tức 247</a>
+    <a class="navbar-brand text-primary" (click)="reload($event,'/')" routerLink="/">Tin tức 247</a>
     <button (click)="clickButtonNav()" id="navbar-toggler" style="color: black" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"><i style="height: fit-content;" class="fas fa-bars"></i></span>
     </button>
