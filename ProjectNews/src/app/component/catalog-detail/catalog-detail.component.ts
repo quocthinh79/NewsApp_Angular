@@ -18,7 +18,6 @@ export class CatalogDetailComponent implements OnInit, OnDestroy {
       let id = this.route.snapshot.params.id;
       this.getRssFeedData(id);
     })
-
   }
 
   getRssFeedData(parameter: string) {
