@@ -1,10 +1,7 @@
-import {Inject, Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {RSSNews} from "../model/NewsRSS";
-import * as xml2js from "xml2js";
+import {Injectable} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import axios from "axios";
-import cheerio from "cheerio";
 
 @Injectable({
   providedIn: 'root'
