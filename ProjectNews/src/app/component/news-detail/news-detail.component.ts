@@ -28,7 +28,6 @@ export class NewsDetailComponent implements OnInit, OnDestroy {
     this.service.getDataHtml(parameter).then(response => {
       const html = response.data
       const $ = cheerio.load(html)
-      /*this.dataHtml = $('#content_detail').html();*/
       this.divID.nativeElement.innerHTML = $('#content_detail').html();
     })
   }
