@@ -35,10 +35,9 @@ export class NewsDetailComponent implements OnInit, OnDestroy {
       this.divID.nativeElement.innerHTML = $('#content_detail').html();
 
       let img = (<HTMLElement>this.divID.nativeElement).querySelectorAll('.lazyload');
-      var imgList = $('.lazyload');
-      for(let i = 0; i <= imgList.length; i++) {
-        console.log(imgList[i]);
-        let src = imgList[i].getAttribute("data-src")
+      for(let i = 0; i <= img.length; i++) {
+        console.log(img[i]);
+        let src = img[i].getAttribute("data-src")
         console.log(src)
         img[i].setAttribute("src", "" + src + "");
         img[i].removeAttribute("data-src")
