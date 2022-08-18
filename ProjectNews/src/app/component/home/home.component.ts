@@ -62,6 +62,11 @@ export class HomeComponent implements OnInit {
     return array;
   }
 
+  reloadPage(uri: string) {
+    location.href = uri;
+    window.open(location.href)
+  }
+
   ngOnInit(): void {
     this.getRssFeedDataHome("trang-chu")
     this.getRssDataBongDaVN("bong-da-viet-nam-c1")

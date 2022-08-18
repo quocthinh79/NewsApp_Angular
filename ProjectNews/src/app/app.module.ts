@@ -57,8 +57,11 @@ import {AppRoutingModule} from "./router/app-routing.module";
 import {DataService} from "./service/data.service";
 import { NewsDetailComponent } from './component/news-detail/news-detail.component';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ScrollToTopComponent } from './component/scroll-to-top/scroll-to-top.component';
+
 @NgModule({
-  declarations: [AppComponent, CatalogDetailComponent, NavigationComponent,HomeComponent, NewsDetailComponent],
+  declarations: [AppComponent, CatalogDetailComponent, NavigationComponent,HomeComponent, NewsDetailComponent, ScrollToTopComponent],
   imports: [
     AppRoutingModule,
     MatToolbarModule,
@@ -107,6 +110,7 @@ import { NewsDetailComponent } from './component/news-detail/news-detail.compone
     MdbTreeviewModule,
     MdbTransferModule,
     MdbMentionModule,
+    Ng2SearchPipeModule,
   ],
   providers: [MdbCookiesManagementService, MdbStorageManagementService, DataService],
   bootstrap: [AppComponent],
