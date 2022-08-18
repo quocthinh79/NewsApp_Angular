@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnDestroy, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 import {DataService} from "../../service/data.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {RSSNews} from "../../model/NewsRSS";
@@ -9,7 +9,9 @@ import cheerio from "cheerio";
 @Component({
   selector: 'app-news-detail',
   templateUrl: './news-detail.component.html',
-  styleUrls: ['./news-detail.component.scss']
+  styleUrls: ['./news-detail.component.scss'],
+  encapsulation: ViewEncapsulation.None
+
 })
 export class NewsDetailComponent implements OnInit, OnDestroy {
   dataHtml: any;
@@ -33,30 +35,21 @@ export class NewsDetailComponent implements OnInit, OnDestroy {
       this.title.nativeElement.innerHTML = $('#title_detail').html();
       this.divID.nativeElement.innerHTML = $('#content_detail').html();
       this.time.nativeElement.innerHTML = $('.time').html();
+      //move data-src to src and remove src to display img
       let img = (<HTMLElement>this.divID.nativeElement).querySelectorAll('.lazyload');
       for(let i = 0; i <= img.length; i++) {
-        console.log(img[i]);
         let src = img[i].getAttribute("data-src")
-        console.log(src)
         img[i].setAttribute("src", "" + src + "");
-        img[i].removeAttribute("data-src")
-
+        img[i].removeAttribute("data-src");
+        img[i].classList.add("img-content")
       }
-      // for(let i = 0; i<=img.length;i++) {
-      //   img[i].promise().done(() => {
+
       //
-      //   })
-
-      // }
-      // console.log(img);
-
-
-
-      console.log((<HTMLElement>this.divID.nativeElement).getElementsByClassName('.sapo_detail'))
-
-
-
-      this.time.nativeElement.innerHTML = $('.time').html();
+      let figureContent = (<HTMLElement>this.divID.nativeElement).getElementsByTagName("figure")
+      for(let j = 0; j< img.length; j++) {
+        console.log(figureContent[j])
+        figureContent[j].classList.add('d-flex','flex-1','justify-content-center','align-items-center')
+      }
     })
   }
 

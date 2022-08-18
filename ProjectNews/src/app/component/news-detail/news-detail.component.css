@@ -12,4 +12,12 @@
   font-size: 100px !important;
 }
 
+.img-content {
+  max-width: 980px;
+}
+
+.sapo_detail {
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=news-detail.component.css.map */
