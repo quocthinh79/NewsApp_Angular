@@ -31,11 +31,10 @@ export class DataService {
   getDataHtml(parameter: string) {
     const cheerio = require('cheerio')
     const CORS_PROXY = "https://calm-spire-97456.herokuapp.com/"
-    axios(CORS_PROXY + "https://thethao247.vn/406-ket-qua-v-league-2022-tp-hcm-vs-hai-phong-29-07-2022-d261910.html").then(response => {
+    axios("https://thethao247.vn/" + parameter + ".html").then(response => {
       const html = response.data
       const $ = cheerio.load(html)
-      console.log($('#content_detail').text())
-      console.log($('#content_detail').html())
+      return $('#content_detail').html();
     })
   }
 }
