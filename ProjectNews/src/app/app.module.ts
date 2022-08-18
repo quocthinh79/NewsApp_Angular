@@ -56,8 +56,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {AppRoutingModule} from "./router/app-routing.module";
 import {DataService} from "./service/data.service";
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ScrollToTopComponent } from './component/scroll-to-top/scroll-to-top.component';
+
 @NgModule({
-  declarations: [AppComponent, CatalogDetailComponent, NavigationComponent,HomeComponent],
+  declarations: [AppComponent, CatalogDetailComponent, NavigationComponent,HomeComponent, ScrollToTopComponent],
   imports: [
     AppRoutingModule,
     MatToolbarModule,
@@ -106,6 +109,7 @@ import {DataService} from "./service/data.service";
     MdbTreeviewModule,
     MdbTransferModule,
     MdbMentionModule,
+    Ng2SearchPipeModule,
   ],
   providers: [MdbCookiesManagementService, MdbStorageManagementService, DataService],
   bootstrap: [AppComponent],
