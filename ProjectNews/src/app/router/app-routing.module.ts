@@ -16,7 +16,7 @@ const routes: Routes = [
     component: CatalogDetailComponent
   },
   {
-    path: 'detail:detail',
+    path: 'detail/:detail',
     component: NewsDetailComponent
   }
 

@@ -1,9 +1,10 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {DataService} from "../../service/data.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {RSSNews} from "../../model/NewsRSS";
 import {HttpClient} from "@angular/common/http";
 import * as xml2js from "xml2js";
+import cheerio from "cheerio";
 
 @Component({
   selector: 'app-news-detail',
@@ -20,8 +21,16 @@ export class NewsDetailComponent implements OnInit, OnDestroy {
     })
   }
 
+  @ViewChild('divID') divID: ElementRef;
+
   getHtmlData(parameter: string) {
-    this.dataHtml = this.service.getDataHtml(parameter);
+    const cheerio = require('cheerio')
+    this.service.getDataHtml(parameter).then(response => {
+      const html = response.data
+      const $ = cheerio.load(html)
+      /*this.dataHtml = $('#content_detail').html();*/
+      this.divID.nativeElement.innerHTML = $('#content_detail').html();
+    })
   }
 
   ngOnInit(): void {

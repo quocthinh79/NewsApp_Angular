@@ -29,12 +29,7 @@ export class DataService {
   }
 
   getDataHtml(parameter: string) {
-    const cheerio = require('cheerio')
     const CORS_PROXY = "https://calm-spire-97456.herokuapp.com/"
-    axios("https://thethao247.vn/" + parameter + ".html").then(response => {
-      const html = response.data
-      const $ = cheerio.load(html)
-      return $('#content_detail').html();
-    })
+    return axios(CORS_PROXY + "https://thethao247.vn/" + parameter + ".html")
   }
 }
