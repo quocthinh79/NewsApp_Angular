@@ -55,9 +55,10 @@ import { NavigationComponent } from './component/navigation/navigation.component
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {AppRoutingModule} from "./router/app-routing.module";
 import {DataService} from "./service/data.service";
+import { NewsDetailComponent } from './component/news-detail/news-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, CatalogDetailComponent, NavigationComponent,HomeComponent],
+  declarations: [AppComponent, CatalogDetailComponent, NavigationComponent,HomeComponent, NewsDetailComponent],
   imports: [
     AppRoutingModule,
     MatToolbarModule,
