@@ -60,9 +60,10 @@ import { NewsDetailComponent } from './component/news-detail/news-detail.compone
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { ScrollToTopComponent } from './component/scroll-to-top/scroll-to-top.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { SearchComponent } from './component/search/search.component';
 
 @NgModule({
-  declarations: [AppComponent, CatalogDetailComponent, NavigationComponent,HomeComponent, NewsDetailComponent, ScrollToTopComponent, FooterComponent],
+  declarations: [AppComponent, CatalogDetailComponent, NavigationComponent,HomeComponent, NewsDetailComponent, ScrollToTopComponent, FooterComponent, SearchComponent],
   imports: [
     AppRoutingModule,
     MatToolbarModule,
