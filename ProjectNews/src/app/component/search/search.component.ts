@@ -1,9 +1,10 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {RSSNews} from "../../model/NewsRSS";
 import {HttpClient} from "@angular/common/http";
 import {DataService} from "../../service/data.service";
 import * as xml2js from "xml2js";
 import cheerio from "cheerio";
+import {HomeComponent} from "../home/home.component";
 
 @Component({
   selector: 'app-search',
@@ -12,8 +13,10 @@ import cheerio from "cheerio";
 })
 export class SearchComponent implements OnInit {
   RssAll: RSSNews[] = [];
-  filterTerm: string;
+  filterTerm: string = '';
   showSearch: boolean = false;
+
+  @Output() showEvent = new EventEmitter<boolean>();
 
   constructor(private http: HttpClient, private service: DataService) {
     this.getHtmlData("rss")
@@ -30,11 +33,12 @@ export class SearchComponent implements OnInit {
 
   @ViewChild("inputSearch") inputSearch: ElementRef;
   onChange() {
-    if (this.filterTerm.length === 1) {
+    if (this.inputSearch.nativeElement.value === '') {
       this.showSearch = false;
     } else {
       this.showSearch = true;
     }
+    this.showEvent.emit(this.showSearch)
   }
 
   getHtmlData(parameter: string) {

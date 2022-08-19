@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import * as xml2js from "xml2js";
 import {RSSNews} from "../../model/NewsRSS";
 import {DataService} from "../../service/data.service";
+import {val} from "cheerio/lib/api/attributes";
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,11 @@ export class HomeComponent implements OnInit {
   RssBundesliga: RSSNews;
   RssQuocTe: RSSNews;
   RssAll: RSSNews[] = [];
-  filterTerm!: string;
+  showParent: boolean = true;
+
+  showElementParent(value: boolean) {
+    this.showParent = !value;
+  }
 
   constructor(private http: HttpClient, private service: DataService) {
   }

@@ -1,5 +1,5 @@
-<app-search></app-search>
-<div class="main-content">
+<app-search (showEvent)="showElementParent($event)"></app-search>
+<div *ngIf="showParent" class="main-content">
   <div class="container">
     <div class="box-main d-flex">
       <div class="is_desktop me-3 fs-6 text-uppercase">

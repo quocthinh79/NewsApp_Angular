@@ -12,7 +12,12 @@ import {DataService} from "../../service/data.service";
 })
 export class CatalogDetailComponent implements OnInit, OnDestroy {
   RssData: RSSNews;
-  filterTerm!: string;
+
+  showParent: boolean = true;
+
+  showElementParent(value: boolean) {
+    this.showParent = !value;
+  }
 
   constructor(private http: HttpClient, private route: ActivatedRoute, private service: DataService, private router: Router) {
     route.params.subscribe(val => {
