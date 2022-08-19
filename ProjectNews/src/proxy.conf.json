@@ -1,0 +1,11 @@
+{
+  "/*": {
+    "target": "https://newsappangular-815ac.web.app",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/": ""
+    },
+    "logLevel": "debug"
+  }
+}

@@ -55,11 +55,13 @@ import { NavigationComponent } from './component/navigation/navigation.component
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {AppRoutingModule} from "./router/app-routing.module";
 import {DataService} from "./service/data.service";
-import { HaGiaPipe } from './ha-gia.pipe';
-import { OnSavePipe } from './on-save.pipe';
+import { NewsDetailComponent } from './component/news-detail/news-detail.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ScrollToTopComponent } from './component/scroll-to-top/scroll-to-top.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, CatalogDetailComponent, NavigationComponent,HomeComponent, HaGiaPipe, OnSavePipe],
+  declarations: [AppComponent, CatalogDetailComponent, NavigationComponent,HomeComponent, NewsDetailComponent, ScrollToTopComponent, FooterComponent],
   imports: [
     AppRoutingModule,
     MatToolbarModule,
@@ -108,6 +110,7 @@ import { OnSavePipe } from './on-save.pipe';
     MdbTreeviewModule,
     MdbTransferModule,
     MdbMentionModule,
+    Ng2SearchPipeModule,
   ],
   providers: [MdbCookiesManagementService, MdbStorageManagementService, DataService],
   bootstrap: [AppComponent],

@@ -15,6 +15,8 @@ export class HomeComponent implements OnInit {
   RssBundesliga: RSSNews;
   RssQuocTe: RSSNews;
 
+  public list: any;
+
   constructor(private http: HttpClient, private service: DataService) {
   }
 
@@ -62,11 +64,18 @@ export class HomeComponent implements OnInit {
     return array;
   }
 
+  reloadPage(uri: string) {
+    location.href = uri;
+    window.open(location.href)
+  }
+
   ngOnInit(): void {
     this.getRssFeedDataHome("trang-chu")
     this.getRssDataBongDaVN("bong-da-viet-nam-c1")
     this.getRssDataBundesliga("bundes-liga-c65")
     this.getRssDataQuocTe("bong-da-quoc-te-c2")
+
+    this.service.getDataHtml("")
   }
 
 }
