@@ -56,7 +56,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {AppRoutingModule} from "./router/app-routing.module";
 import {DataService} from "./service/data.service";
 import { NewsDetailComponent } from './component/news-detail/news-detail.component';
-
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { ScrollToTopComponent } from './component/scroll-to-top/scroll-to-top.component';
 import { FooterComponent } from './component/footer/footer.component';
