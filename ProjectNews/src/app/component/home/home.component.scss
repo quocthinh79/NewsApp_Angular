@@ -7,6 +7,7 @@ $main-color: #254892;
   list-style: none;
   outline: none;
   box-sizing: border-box;
+  background: #f2f2f2;
 
   .box-main {
     .is_desktop {
@@ -112,7 +113,7 @@ $main-color: #254892;
       flex-direction: column !important;
 
       .cover {
-        width: 100% !important;
+        width: 95% !important;
       }
 
       .scroll {
@@ -162,5 +163,3 @@ $main-color: #254892;
     }
   }
 }
-
-
