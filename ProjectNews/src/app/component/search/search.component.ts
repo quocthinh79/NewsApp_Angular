@@ -3,6 +3,7 @@ import {RSSNews} from "../../model/NewsRSS";
 import {HttpClient} from "@angular/common/http";
 import {DataService} from "../../service/data.service";
 import * as xml2js from "xml2js";
+import cheerio from "cheerio";
 
 @Component({
   selector: 'app-search',
@@ -15,6 +16,7 @@ export class SearchComponent implements OnInit {
   showSearch: boolean = false;
 
   constructor(private http: HttpClient, private service: DataService) {
+    this.getHtmlData("rss")
   }
 
   getRssFeedDataSearch(parameter: string) {
@@ -26,21 +28,7 @@ export class SearchComponent implements OnInit {
     });
   }
 
-  forRange(start: number, end: number) {
-    const array = [];
-    for (let n = start; n < end; n++) {
-      array.push(n);
-    }
-    return array;
-  }
-
-  reloadPage(uri: string) {
-    location.href = uri;
-    window.open(location.href)
-  }
-
   @ViewChild("inputSearch") inputSearch: ElementRef;
-
   onChange() {
     if (this.filterTerm.length === 1) {
       this.showSearch = false;
@@ -49,10 +37,21 @@ export class SearchComponent implements OnInit {
     }
   }
 
+  getHtmlData(parameter: string) {
+    const cheerio = require('cheerio')
+    this.service.getDataHtml(parameter).then(response => {
+      const html = response.data
+      const $ = cheerio.load(html)
+      $('.rss_txt').each((index: any, element: any) => {
+        if (!$(element).text().includes("|")) {
+          let url = $(element).attr('href')?.slice($(element).attr('href')?.lastIndexOf("/") + 1, $(element).attr('href')?.lastIndexOf("."))
+          this.getRssFeedDataSearch(url)
+          console.log($(element).text())
+        }
+      })
+    })
+  }
+
   ngOnInit(): void {
-    this.getRssFeedDataSearch("trang-chu")
-    this.getRssFeedDataSearch("bong-da-viet-nam-c1")
-    this.getRssFeedDataSearch("bundes-liga-c65")
-    this.getRssFeedDataSearch("bong-da-quoc-te-c2")
   }
 }
