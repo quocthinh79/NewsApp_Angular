@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import * as xml2js from "xml2js";
 import {RSSNews} from "../../model/NewsRSS";
 import {DataService} from "../../service/data.service";
+import {val} from "cheerio/lib/api/attributes";
 
 @Component({
   selector: 'app-home',
@@ -14,44 +15,52 @@ export class HomeComponent implements OnInit {
   RssBongDaVN: RSSNews;
   RssBundesliga: RSSNews;
   RssQuocTe: RSSNews;
+  RssAll: RSSNews[] = [];
+  showParent: boolean = true;
 
-  public list: any;
+  showElementParent(value: boolean) {
+    this.showParent = !value;
+  }
 
   constructor(private http: HttpClient, private service: DataService) {
   }
 
-  getRssFeedDataHome(paramater: string) {
-    this.service.getDataRss(paramater).subscribe(data => {
+  getRssFeedDataHome(parameter: string) {
+    this.service.getDataRss(parameter).subscribe(data => {
       let parseString = xml2js.parseString;
       parseString(data, (err, result: RSSNews) => {
         this.RssDataHome = result;
+        this.RssAll.push(result)
       });
     });
   }
 
-  getRssDataBongDaVN(paramater: string) {
-    this.service.getDataRss(paramater).subscribe(data => {
+  getRssDataBongDaVN(parameter: string) {
+    this.service.getDataRss(parameter).subscribe(data => {
       let parseString = xml2js.parseString;
       parseString(data, (err, result: RSSNews) => {
         this.RssBongDaVN = result;
+        this.RssAll.push(result)
       });
     });
   }
 
-  getRssDataBundesliga(paramater: string) {
-    this.service.getDataRss(paramater).subscribe(data => {
+  getRssDataBundesliga(parameter: string) {
+    this.service.getDataRss(parameter).subscribe(data => {
       let parseString = xml2js.parseString;
       parseString(data, (err, result: RSSNews) => {
         this.RssBundesliga = result;
+        this.RssAll.push(result)
       });
     });
   }
 
-  getRssDataQuocTe(paramater: string) {
-    this.service.getDataRss(paramater).subscribe(data => {
+  getRssDataQuocTe(parameter: string) {
+    this.service.getDataRss(parameter).subscribe(data => {
       let parseString = xml2js.parseString;
       parseString(data, (err, result: RSSNews) => {
         this.RssQuocTe = result;
+        this.RssAll.push(result)
       });
     });
   }
@@ -74,8 +83,5 @@ export class HomeComponent implements OnInit {
     this.getRssDataBongDaVN("bong-da-viet-nam-c1")
     this.getRssDataBundesliga("bundes-liga-c65")
     this.getRssDataQuocTe("bong-da-quoc-te-c2")
-
-    this.service.getDataHtml("")
   }
-
 }
