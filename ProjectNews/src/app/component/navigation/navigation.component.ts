@@ -1,4 +1,4 @@
-import {Component, ElementRef, HostListener, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
+import {Component, ElementRef, HostListener, Input, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
@@ -7,8 +7,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
-
-  constructor(private router: Router, private elRef: ElementRef) {
+  constructor(private router: Router) {
   }
 
   navbarFixed: boolean = false;
