@@ -21,6 +21,14 @@ export class HomeComponent implements OnInit {
     this.showParent = !value;
   }
 
+  getLink(link: any){
+    let linkRouter = link+"";
+    linkRouter = linkRouter.replace("https://thethao247.vn", "detail");
+    linkRouter = linkRouter.replace(".html", "");
+    console.log(linkRouter)
+    return linkRouter;
+  }
+
   constructor(private http: HttpClient, private service: DataService) {
   }
 
