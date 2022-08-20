@@ -45,7 +45,7 @@ export class NewsDetailComponent implements OnInit, OnDestroy {
       this.time.nativeElement.innerHTML = $('.time').html();
 
       //remove advertiserment
-      $('.ad-label').remove();
+      $('.ad-label').empty();
 
       //move data-src to src and remove src to display img
       let img = (<HTMLElement>this.divID.nativeElement).querySelectorAll('.lazyload');
