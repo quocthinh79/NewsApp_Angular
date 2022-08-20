@@ -48,7 +48,6 @@ export class SearchComponent implements OnInit {
         if (!$(element).text().includes("|")) {
           let url = $(element).attr('href')?.slice($(element).attr('href')?.lastIndexOf("/") + 1, $(element).attr('href')?.lastIndexOf("."))
           this.getRssFeedDataSearch(url)
-          console.log($(element).text())
         }
       })
     })
