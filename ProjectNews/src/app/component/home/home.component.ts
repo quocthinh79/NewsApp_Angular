@@ -15,7 +15,11 @@ export class HomeComponent implements OnInit {
   RssBundesliga: RSSNews;
   RssQuocTe: RSSNews;
   RssAll: RSSNews[] = [];
-  filterTerm!: string;
+  showParent: boolean = true;
+
+  showElementParent(value: boolean) {
+    this.showParent = !value;
+  }
 
   constructor(private http: HttpClient, private service: DataService) {
   }

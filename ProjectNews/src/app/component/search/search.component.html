@@ -1,9 +1,9 @@
 <div style="margin-top: 8px">
   <input #inputSearch (ngModelChange)="onChange()"
-    type="text"
-    class="form-control"
-    placeholder="Tìm kiếm..."
-    [(ngModel)]="filterTerm"
+         type="text"
+         class="form-control"
+         placeholder="Tìm kiếm..."
+         [(ngModel)]="filterTerm"
   />
 </div>
 <div *ngIf="showSearch" class="content">
@@ -17,7 +17,7 @@
                src="{{z.image}}"
                width="140" height="88"
                alt="{{z.title}}"></a>
-        <div class="text flex-1">
+        <div class="text flex-1 three-row-text">
           <h3><a href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
                  class="title webkit-box"
                  title="{{z.title}}">{{z.title}}</a>

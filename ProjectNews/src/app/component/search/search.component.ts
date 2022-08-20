@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {RSSNews} from "../../model/NewsRSS";
 import {HttpClient} from "@angular/common/http";
 import {DataService} from "../../service/data.service";
@@ -11,10 +11,13 @@ import * as xml2js from "xml2js";
 })
 export class SearchComponent implements OnInit {
   RssAll: RSSNews[] = [];
-  filterTerm: string;
+  filterTerm: string = '';
   showSearch: boolean = false;
 
+  @Output() showEvent = new EventEmitter<boolean>();
+
   constructor(private http: HttpClient, private service: DataService) {
+    this.getHtmlData("rss")
   }
 
   getRssFeedDataSearch(parameter: string) {
@@ -26,33 +29,31 @@ export class SearchComponent implements OnInit {
     });
   }
 
-  forRange(start: number, end: number) {
-    const array = [];
-    for (let n = start; n < end; n++) {
-      array.push(n);
-    }
-    return array;
-  }
-
-  reloadPage(uri: string) {
-    location.href = uri;
-    window.open(location.href)
-  }
-
   @ViewChild("inputSearch") inputSearch: ElementRef;
-
   onChange() {
-    if (this.filterTerm.length === 1) {
+    if (this.inputSearch.nativeElement.value === '') {
       this.showSearch = false;
     } else {
       this.showSearch = true;
     }
+    this.showEvent.emit(this.showSearch)
+  }
+
+  getHtmlData(parameter: string) {
+    const cheerio = require('cheerio')
+    this.service.getDataHtml(parameter).subscribe(response => {
+      const html = response
+      const $ = cheerio.load(html)
+      $('.rss_txt').each((index: any, element: any) => {
+        if (!$(element).text().includes("|")) {
+          let url = $(element).attr('href')?.slice($(element).attr('href')?.lastIndexOf("/") + 1, $(element).attr('href')?.lastIndexOf("."))
+          this.getRssFeedDataSearch(url)
+          console.log($(element).text())
+        }
+      })
+    })
   }
 
   ngOnInit(): void {
-    this.getRssFeedDataSearch("trang-chu")
-    this.getRssFeedDataSearch("bong-da-viet-nam-c1")
-    this.getRssFeedDataSearch("bundes-liga-c65")
-    this.getRssFeedDataSearch("bong-da-quoc-te-c2")
   }
 }
