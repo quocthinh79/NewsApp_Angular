@@ -67,18 +67,8 @@ export class NewsDetailComponent implements OnInit, OnDestroy {
       //
       let figureContent = (<HTMLElement>this.divID.nativeElement).getElementsByTagName("figure")
       for (let j = 0; j < img.length; j++) {
-        // console.log(figureContent[j])
         figureContent[j].classList.add('d-flex', 'flex-1', 'justify-content-center', 'align-items-center')
       }
-
-
-      //convert href link to routerlink
-      /*let links = (<HTMLElement>this.divID.nativeElement).getElementsByTagName("a")
-      for(let index = 0; index <= links.length; index++) {
-        console.log(links[index]);
-        let link = links[index].getAttribute("href");
-        console.log(link)
-      }*/
     })
   }
 

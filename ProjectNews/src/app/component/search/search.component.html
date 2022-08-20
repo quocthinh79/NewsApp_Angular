@@ -11,14 +11,14 @@
     <div *ngFor="let y of x.rss.channel">
       <li *ngFor="let z of y.item | filter: filterTerm" class="d-flex flex-row border-bottom py-3">
         <a
-          href="{{z.link}}"
+          routerLink="{{'/detail/' + (z.link.toString().slice(z.link.toString().lastIndexOf('/') + 1, z.link.toString().lastIndexOf('.')))}}"
           class="thumb me-3" title="{{z.title}}">
           <img class=""
                src="{{z.image}}"
                width="140" height="88"
                alt="{{z.title}}"></a>
         <div class="text flex-1 three-row-text">
-          <h3><a href="https://thethao247.vn/423-bang-xep-hang-vcs-mua-he-2022-moi-nhat-d260467.html"
+          <h3><a routerLink="{{'/detail/' + (z.link.toString().slice(z.link.toString().lastIndexOf('/') + 1, z.link.toString().lastIndexOf('.')))}}"
                  class="title webkit-box"
                  title="{{z.title}}">{{z.title}}</a>
           </h3>
