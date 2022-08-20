@@ -1,11 +1,13 @@
-import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnDestroy, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 import {DataService} from "../../service/data.service";
 import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-news-detail',
   templateUrl: './news-detail.component.html',
-  styleUrls: ['./news-detail.component.scss']
+  styleUrls: ['./news-detail.component.scss'],
+  encapsulation: ViewEncapsulation.None
+
 })
 export class NewsDetailComponent implements OnInit, OnDestroy {
 
@@ -25,23 +27,46 @@ export class NewsDetailComponent implements OnInit, OnDestroy {
     this.service.getDataHtml(parameter).subscribe(response => {
       const html = response
       const $ = cheerio.load(html)
+
       this.title.nativeElement.innerHTML = $('#title_detail').html();
       this.divID.nativeElement.innerHTML = $('#content_detail').html();
       this.time.nativeElement.innerHTML = $('.time').html();
+
+      //remove advertiserment
+      $('.ad-label').remove();
+
+      //move data-src to src and remove src to display img
       let img = (<HTMLElement>this.divID.nativeElement).querySelectorAll('.lazyload');
+
+
+      //set img src
       for(let i = 0; i <= img.length; i++) {
-        console.log(img[i]);
         let src = img[i].getAttribute("data-src")
-        console.log(src)
         img[i].setAttribute("src", "" + src + "");
-        img[i].removeAttribute("data-src")
-
+        img[i].removeAttribute("data-src");
+        img[i].classList.add("img-content")
       }
-      console.log((<HTMLElement>this.divID.nativeElement).getElementsByClassName('.sapo_detail'))
+
+      //scale iframe video
+
+      $("iframe").setAttribute("width","100%")
+      $("iframe").setAttribute("height","100%")
+
+      //
+      let figureContent = (<HTMLElement>this.divID.nativeElement).getElementsByTagName("figure")
+      for(let j = 0; j< img.length; j++) {
+        // console.log(figureContent[j])
+        figureContent[j].classList.add('d-flex','flex-1','justify-content-center','align-items-center')
+      }
 
 
-
-      this.time.nativeElement.innerHTML = $('.time').html();
+      //convert href link to routerlink
+      let links = (<HTMLElement>this.divID.nativeElement).getElementsByTagName("a");
+      for(let index = 0; index <= links.length; index++) {
+        console.log(links[index]);
+        let link = links[index].getAttribute("href");
+        console.log(link)
+      }
     })
   }
 

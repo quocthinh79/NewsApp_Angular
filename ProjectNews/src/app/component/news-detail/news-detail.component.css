@@ -3,13 +3,67 @@
 }
 
 .main-container {
-  width: 980px;
+  width: 60%;
   margin: 0 auto;
+  padding: 30px;
 }
 
 .sub-title {
   font-weight: bolder !important;
   font-size: 100px !important;
+}
+
+.sapo_detail {
+  font-weight: bold;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  padding-top: 10px;
+}
+
+iframe {
+  dipslay: none;
+}
+
+figure .videomclWrapper iframe {
+  width: 100%;
+  height: 530px;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  .main-container {
+    width: 80%;
+  }
+
+  figure .videomclWrapper iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main {
+    width: 100%;
+    /* The width is 100%, when the viewport is 800px or smaller */
+  }
+
+  .main-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  figure .videomclWrapper iframe {
+    width: 100%;
+    height: 190px;
+  }
 }
 
 /*# sourceMappingURL=news-detail.component.css.map */
