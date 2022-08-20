@@ -43,6 +43,7 @@ figure .videomclWrapper iframe {
   .main-container {
     width: 80%;
   }
+
   figure .videomclWrapper iframe {
     width: 100%;
     height: auto;
@@ -50,12 +51,15 @@ figure .videomclWrapper iframe {
 }
 @media screen and (max-width: 800px) {
   .main {
-    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    width: 100%;
+    /* The width is 100%, when the viewport is 800px or smaller */
   }
+
   .main-container {
     width: 100%;
     padding: 20px;
   }
+
   figure .videomclWrapper iframe {
     width: 100%;
     height: 190px;
