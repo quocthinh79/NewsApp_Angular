@@ -25,7 +25,6 @@ export class HomeComponent implements OnInit {
     let linkRouter = link+"";
     linkRouter = linkRouter.replace("https://thethao247.vn", "detail");
     linkRouter = linkRouter.replace(".html", "");
-    console.log(linkRouter)
     return linkRouter;
   }
 
