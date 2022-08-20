@@ -1,10 +1,6 @@
 import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {DataService} from "../../service/data.service";
-import {ActivatedRoute, Router} from "@angular/router";
-import {RSSNews} from "../../model/NewsRSS";
-import {HttpClient} from "@angular/common/http";
-import * as xml2js from "xml2js";
-import cheerio from "cheerio";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-news-detail',
@@ -12,7 +8,6 @@ import cheerio from "cheerio";
   styleUrls: ['./news-detail.component.scss']
 })
 export class NewsDetailComponent implements OnInit, OnDestroy {
-  dataHtml: any;
 
   constructor(private route: ActivatedRoute, private service: DataService) {
     route.params.subscribe( val => {
@@ -27,8 +22,8 @@ export class NewsDetailComponent implements OnInit, OnDestroy {
 
   getContentData(parameter: string) {
     const cheerio = require('cheerio')
-    this.service.getDataHtml(parameter).then(response => {
-      const html = response.data
+    this.service.getDataHtml(parameter).subscribe(response => {
+      const html = response
       const $ = cheerio.load(html)
       this.title.nativeElement.innerHTML = $('#title_detail').html();
       this.divID.nativeElement.innerHTML = $('#content_detail').html();
@@ -42,16 +37,6 @@ export class NewsDetailComponent implements OnInit, OnDestroy {
         img[i].removeAttribute("data-src")
 
       }
-      // for(let i = 0; i<=img.length;i++) {
-      //   img[i].promise().done(() => {
-      //
-      //   })
-
-      // }
-      // console.log(img);
-
-
-
       console.log((<HTMLElement>this.divID.nativeElement).getElementsByClassName('.sapo_detail'))
 
 
