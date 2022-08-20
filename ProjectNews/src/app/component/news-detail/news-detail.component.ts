@@ -12,14 +12,14 @@ import {ActivatedRoute} from "@angular/router";
 export class NewsDetailComponent implements OnInit, OnDestroy {
 
   constructor(private route: ActivatedRoute, private service: DataService) {
-    route.params.subscribe( val => {
+    route.params.subscribe(val => {
       let id = this.route.snapshot.params.detail;
       this.getContentData(id);
     })
   }
 
   @ViewChild('divID') divID: ElementRef;
-  @ViewChild('title') title:ElementRef;
+  @ViewChild('title') title: ElementRef;
   @ViewChild('time') time: ElementRef;
 
   getContentData(parameter: string) {
@@ -27,6 +27,18 @@ export class NewsDetailComponent implements OnInit, OnDestroy {
     this.service.getDataHtml(parameter).subscribe(response => {
       const html = response
       const $ = cheerio.load(html)
+      let links = $("p > a[target='_blank']");
+      for (let index = 0; index <= links.length; index++) {
+        let linkInHref = $(links[index]).attr("href");
+        let link = ""
+        if (linkInHref !== undefined) {
+          link = "detail/" + linkInHref.slice(linkInHref.lastIndexOf("/") + 1, linkInHref.lastIndexOf("."))
+        }
+        $(links[index]).removeAttr("href")
+        $(links[index]).removeAttr("target")
+        $(links[index]).attr("routerLink", "" + link + "")
+        $(links[index]).attr("href", "" + link + "")
+      }
 
       this.title.nativeElement.innerHTML = $('#title_detail').html();
       this.divID.nativeElement.innerHTML = $('#content_detail').html();
@@ -40,7 +52,7 @@ export class NewsDetailComponent implements OnInit, OnDestroy {
 
 
       //set img src
-      for(let i = 0; i <= img.length; i++) {
+      for (let i = 0; i <= img.length; i++) {
         let src = img[i].getAttribute("data-src")
         img[i].setAttribute("src", "" + src + "");
         img[i].removeAttribute("data-src");
@@ -49,24 +61,24 @@ export class NewsDetailComponent implements OnInit, OnDestroy {
 
       //scale iframe video
 
-      $("iframe").setAttribute("width","100%")
-      $("iframe").setAttribute("height","100%")
+      $("iframe").setAttribute("width", "100%")
+      $("iframe").setAttribute("height", "100%")
 
       //
       let figureContent = (<HTMLElement>this.divID.nativeElement).getElementsByTagName("figure")
-      for(let j = 0; j< img.length; j++) {
+      for (let j = 0; j < img.length; j++) {
         // console.log(figureContent[j])
-        figureContent[j].classList.add('d-flex','flex-1','justify-content-center','align-items-center')
+        figureContent[j].classList.add('d-flex', 'flex-1', 'justify-content-center', 'align-items-center')
       }
 
 
       //convert href link to routerlink
-      let links = (<HTMLElement>this.divID.nativeElement).getElementsByTagName("a");
+      /*let links = (<HTMLElement>this.divID.nativeElement).getElementsByTagName("a")
       for(let index = 0; index <= links.length; index++) {
         console.log(links[index]);
         let link = links[index].getAttribute("href");
         console.log(link)
-      }
+      }*/
     })
   }
 
