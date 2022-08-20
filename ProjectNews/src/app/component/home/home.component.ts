@@ -3,7 +3,6 @@ import {HttpClient} from "@angular/common/http";
 import * as xml2js from "xml2js";
 import {RSSNews} from "../../model/NewsRSS";
 import {DataService} from "../../service/data.service";
-import {val} from "cheerio/lib/api/attributes";
 
 @Component({
   selector: 'app-home',

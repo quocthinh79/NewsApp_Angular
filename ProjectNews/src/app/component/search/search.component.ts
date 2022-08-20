@@ -3,8 +3,6 @@ import {RSSNews} from "../../model/NewsRSS";
 import {HttpClient} from "@angular/common/http";
 import {DataService} from "../../service/data.service";
 import * as xml2js from "xml2js";
-import cheerio from "cheerio";
-import {HomeComponent} from "../home/home.component";
 
 @Component({
   selector: 'app-search',
@@ -43,8 +41,8 @@ export class SearchComponent implements OnInit {
 
   getHtmlData(parameter: string) {
     const cheerio = require('cheerio')
-    this.service.getDataHtml(parameter).then(response => {
-      const html = response.data
+    this.service.getDataHtml(parameter).subscribe(response => {
+      const html = response
       const $ = cheerio.load(html)
       $('.rss_txt').each((index: any, element: any) => {
         if (!$(element).text().includes("|")) {
