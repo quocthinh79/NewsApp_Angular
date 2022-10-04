@@ -6,7 +6,7 @@
         {{RssData.rss.channel[0].title}}
       </div>
       <div class="big-news flex-1 d-flex bg-big-news mb-3 flex-column flex-sm-row">
-        <a  routerLink="{{'/detail/' + (RssData.rss.channel[0].item[0].link.toString().slice(RssData.rss.channel[0].item[0].link.toString().lastIndexOf('/') + 1, RssData.rss.channel[0].item[0].link.toString().lastIndexOf('.')))}}" title="{{RssData.rss.channel[0].item[0].title}}" class="image-big-news flex-1 bg-center" style="background-size: cover ;background-image: url({{RssData.rss.channel[0].item[0].image}})">
+        <a  routerLink="{{'/detail/' + (RssData.rss.channel[0].item[0].link.toString().slice(RssData.rss.channel[0].item[0].link.toString().lastIndexOf('/') + 1, RssData.rss.channel[0].item[0].link.toString().lastIndexOf('.')))}}" title="{{RssData.rss.channel[0].item[0].title}}" class="image-big-news flex-1 bg-center" style="background-size: cover ;background-image: url('{{RssData.rss.channel[0].item[0].description.toString().slice(RssData.rss.channel[0].item[0].description.toString().lastIndexOf('src=') + 5, RssData.rss.channel[0].item[0].description.toString().lastIndexOf(' width=')-1)}}')">
 
         </a>
         <div class="right-content-big-news flex-1 mx-3 my-2">
@@ -23,7 +23,7 @@
         <!--Item small-->
         <div class="item-small-news w-18rem d-flex flex-row flex-sm-column m-0 w-100-res h-7rem-res"
              *ngFor="let x of forRange(1, 4)">
-          <a routerLink="{{'/detail/' + (RssData.rss.channel[0].item[x].link.toString().slice(RssData.rss.channel[0].item[x].link.toString().lastIndexOf('/') + 1, RssData.rss.channel[0].item[x].link.toString().lastIndexOf('.')))}}" title="{{RssData.rss.channel[0].item[x].title}}" class="img flex-3 flex-1-res mb-2 bg-center" style="background-size: cover ;background-image: url({{RssData.rss.channel[0].item[x].image}})">
+          <a routerLink="{{'/detail/' + (RssData.rss.channel[0].item[x].link.toString().slice(RssData.rss.channel[0].item[x].link.toString().lastIndexOf('/') + 1, RssData.rss.channel[0].item[x].link.toString().lastIndexOf('.')))}}" title="{{RssData.rss.channel[0].item[x].title}}" class="img flex-3 flex-1-res mb-2 bg-center" style="background-size: cover ;background-image: url('{{RssData.rss.channel[0].item[x].description.toString().slice(RssData.rss.channel[0].item[x].description.toString().lastIndexOf('src=') + 5, RssData.rss.channel[0].item[x].description.toString().lastIndexOf(' width=')-1)}}')">
 
           </a>
           <a title="{{RssData.rss.channel[0].item[x].title}}" routerLink="{{'/detail/' + (RssData.rss.channel[0].item[x].link.toString().slice(RssData.rss.channel[0].item[x].link.toString().lastIndexOf('/') + 1, RssData.rss.channel[0].item[x].link.toString().lastIndexOf('.')))}}" class="content flex-1 flex-1-res fw-bold fs-6 text ml-3 m-sm-0 min-h-50px text-ellipsis">
@@ -39,7 +39,7 @@
       <div
         *ngFor="let x of forRange(4, RssData.rss.channel[0].item.length)">
         <div class="item d-flex flex-row h-140 mb-4">
-          <a routerLink="{{'/detail/' + (RssData.rss.channel[0].item[x].link.toString().slice(RssData.rss.channel[0].item[x].link.toString().lastIndexOf('/') + 1, RssData.rss.channel[0].item[x].link.toString().lastIndexOf('.')))}}" title="{{RssData.rss.channel[0].item[x].title}}" class="image flex-1 flex-1-res bg-center" style="background-size: cover ;background-image: url({{RssData.rss.channel[0].item[x].image}})">
+          <a routerLink="{{'/detail/' + (RssData.rss.channel[0].item[x].link.toString().slice(RssData.rss.channel[0].item[x].link.toString().lastIndexOf('/') + 1, RssData.rss.channel[0].item[x].link.toString().lastIndexOf('.')))}}" title="{{RssData.rss.channel[0].item[x].title}}" class="image flex-1 flex-1-res bg-center" style="background-size: cover ;background-image: url('{{RssData.rss.channel[0].item[x].description.toString().slice(RssData.rss.channel[0].item[x].description.toString().lastIndexOf('src=') + 5, RssData.rss.channel[0].item[x].description.toString().lastIndexOf(' width=')-1)}}')">
 
           </a>
           <div class="content-item flex-3 flex-1-res ms-3 d-flex flex-column">

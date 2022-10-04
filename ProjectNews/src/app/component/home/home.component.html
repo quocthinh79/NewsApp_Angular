@@ -135,7 +135,7 @@
               <img
                 class="flex-1"
                 style="width: 320px; min-height: 100%;"
-                src="{{RssDataHome.rss.channel[0].item[0].image}}"
+                src="{{RssDataHome.rss.channel[0].item[0].description.toString().slice(RssDataHome.rss.channel[0].item[0].description.toString().lastIndexOf('src=') + 5, RssDataHome.rss.channel[0].item[0].description.toString().lastIndexOf(' width=')-1)}}"
                 alt="{{RssDataHome.rss.channel[0].item[0].title}}">
               <a routerLink="{{getLink(RssDataHome.rss.channel[0].item[0].link)}}"
                  class="thumb" title="{{RssDataHome.rss.channel[0].item[0].title}}">
@@ -178,7 +178,7 @@
                   class="thumb fw-bold"
                   title="{{RssDataHome.rss.channel[0].item[x].title}}">
                   <img
-                    src="{{RssDataHome.rss.channel[0].item[x].image}}"
+                    src="{{RssDataHome.rss.channel[0].item[x].description.toString().slice(RssDataHome.rss.channel[0].item[x].description.toString().lastIndexOf('src=') + 5, RssDataHome.rss.channel[0].item[x].description.toString().lastIndexOf(' width=')-1)}}"
                     class="img-fluid"
                     width="389" height="234"
                     alt="{{RssDataHome.rss.channel[0].item[x].title}}"></a>
@@ -214,7 +214,7 @@
                   routerLink="{{getLink(RssDataHome.rss.channel[0].item[x].link)}}"
                   class="thumb me-3" title="{{RssDataHome.rss.channel[0].item[x].title}}">
                   <img class=""
-                       src="{{RssDataHome.rss.channel[0].item[x].image}}"
+                       src="{{RssDataHome.rss.channel[0].item[x].description.toString().slice(RssDataHome.rss.channel[0].item[x].description.toString().lastIndexOf('src=') + 5, RssDataHome.rss.channel[0].item[x].description.toString().lastIndexOf(' width=')-1)}}"
                        width="140" height="88"
                        alt="{{RssDataHome.rss.channel[0].item[x].title}}"></a>
                 <div class="text flex-1">
@@ -245,7 +245,7 @@
                 <a routerLink="{{getLink(RssBongDaVN.rss.channel[0].item[0].link)}}" class="thumb flex-0-48"
                    title="{{RssBongDaVN.rss.channel[0].item[0].title}}">
                   <img class=""
-                       src="{{RssBongDaVN.rss.channel[0].item[0].image}}"
+                       src="{{RssBongDaVN.rss.channel[0].item[0].description.toString().slice(RssBongDaVN.rss.channel[0].item[0].description.toString().lastIndexOf('src=') + 5, RssBongDaVN.rss.channel[0].item[0].description.toString().lastIndexOf(' width=')-1)}}"
                        width="382" height="240"
                        alt="{{RssBongDaVN.rss.channel[0].item[0].title}}">
                 </a>
@@ -268,7 +268,7 @@
                     routerLink="{{getLink(RssBongDaVN.rss.channel[0].item[x].link)}}"
                     class="thumb"
                     title="{{RssBongDaVN.rss.channel[0].item[x].title}}">
-                    <img class="" src="{{RssBongDaVN.rss.channel[0].item[x].image}}"
+                    <img class="" src="{{RssBongDaVN.rss.channel[0].item[x].description.toString().slice(RssBongDaVN.rss.channel[0].item[x].description.toString().lastIndexOf('src=') + 5, RssBongDaVN.rss.channel[0].item[x].description.toString().lastIndexOf(' width=')-1)}}"
                          width="382"
                          height="240"
                          alt="{{RssBongDaVN.rss.channel[0].item[x].title}}"></a>
@@ -297,7 +297,7 @@
                 <a
                   routerLink="{{getLink(RssBundesliga.rss.channel[0].item[0].link)}}"
                   class="thumb flex-0-48" title="{{RssBundesliga.rss.channel[0].item[0].title}}"><img class=""
-                                                                                                      src="{{RssBundesliga.rss.channel[0].item[0].image}}"
+                                                                                                      src="{{RssBundesliga.rss.channel[0].item[0].description.toString().slice(RssBundesliga.rss.channel[0].item[0].description.toString().lastIndexOf('src=') + 5, RssBundesliga.rss.channel[0].item[0].description.toString().lastIndexOf(' width=')-1)}}"
                                                                                                       width="382"
                                                                                                       height="240"
                                                                                                       alt="{{RssBundesliga.rss.channel[0].item[0].title}}"></a>
@@ -319,7 +319,7 @@
                     class="thumb"
                     title="{{RssBundesliga.rss.channel[0].item[x].title}}"><img
                     class=""
-                    src="{{RssBundesliga.rss.channel[0].item[x].image}}"
+                    src="{{RssBundesliga.rss.channel[0].item[x].description.toString().slice(RssBundesliga.rss.channel[0].item[x].description.toString().lastIndexOf('src=') + 5, RssBundesliga.rss.channel[0].item[x].description.toString().lastIndexOf(' width=')-1)}}"
                     width="382" height="240"
                     alt="{{RssBundesliga.rss.channel[0].item[x].title}}"></a>
                   <h3><a
@@ -348,7 +348,7 @@
                 <a
                   routerLink="{{getLink(RssQuocTe.rss.channel[0].item[0].link)}}"
                   class="thumb flex-0-48" title="{{RssQuocTe.rss.channel[0].item[0].title}}"><img class=""
-                                                                                                  src="{{RssQuocTe.rss.channel[0].item[0].image}}"
+                                                                                                  src="{{RssQuocTe.rss.channel[0].item[0].description.toString().slice(RssQuocTe.rss.channel[0].item[0].description.toString().lastIndexOf('src=') + 5, RssQuocTe.rss.channel[0].item[0].description.toString().lastIndexOf(' width=')-1)}}"
                                                                                                   width="382"
                                                                                                   height="240"
                                                                                                   alt="{{RssQuocTe.rss.channel[0].item[0].title}}"></a>
@@ -369,7 +369,7 @@
                     routerLink="{{getLink(RssQuocTe.rss.channel[0].item[x].link)}}"
                     class="thumb" title="{{RssQuocTe.rss.channel[0].item[x].title}}"><img
                     class=""
-                    src="{{RssQuocTe.rss.channel[0].item[x].image}}"
+                    src="{{RssQuocTe.rss.channel[0].item[x].description.toString().slice(RssQuocTe.rss.channel[0].item[x].description.toString().lastIndexOf('src=') + 5, RssQuocTe.rss.channel[0].item[x].description.toString().lastIndexOf(' width=')-1)}}"
                     width="382" height="240"
                     alt="{{RssQuocTe.rss.channel[0].item[x].title}}"></a>
                   <h3><a
