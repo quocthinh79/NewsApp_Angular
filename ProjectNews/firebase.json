@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist\\mdb5-angular-ui-kit-pro-advanced",
+    "public": "dist/mdb5-angular-ui-kit-pro-advanced",
     "ignore": [
       "firebase.json",
       "**/.*",
